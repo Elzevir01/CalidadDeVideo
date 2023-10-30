@@ -39,13 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtCopyV2 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtCopyV1 = new System.Windows.Forms.TextBox();
-            this.txtCopyV3 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -55,22 +48,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtCopyV4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabSetting = new System.Windows.Forms.TabControl();
             this.tabBitRate = new System.Windows.Forms.TabPage();
             this.tabFrameRate = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtCopyFrameV2 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtCopyFrameV1 = new System.Windows.Forms.TextBox();
-            this.txtCopyFrameV3 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -80,28 +61,13 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.txtCopyFrameV4 = new System.Windows.Forms.TextBox();
             this.txtFrameRateV3 = new System.Windows.Forms.TextBox();
             this.txtFrameRateV4 = new System.Windows.Forms.TextBox();
             this.txtFrameRateV2 = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
             this.txtFrameRateV1 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.tabResolucion = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.txtCopyResolucionV2 = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.txtCopyResolucionV1 = new System.Windows.Forms.TextBox();
-            this.txtCopyResolucionV3 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
@@ -111,20 +77,21 @@
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.txtCopyResolucionV4 = new System.Windows.Forms.TextBox();
             this.txtResolucionV3 = new System.Windows.Forms.TextBox();
             this.txtResolucionV4 = new System.Windows.Forms.TextBox();
             this.txtResolucionV2 = new System.Windows.Forms.TextBox();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
             this.txtResolucionV1 = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabSetting.SuspendLayout();
             this.tabBitRate.SuspendLayout();
@@ -174,11 +141,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 110);
+            this.label1.Location = new System.Drawing.Point(18, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Valores entre:";
+            this.label1.Text = "Valores superiores a:";
             // 
             // label2
             // 
@@ -192,20 +159,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 56);
+            this.label3.Location = new System.Drawing.Point(18, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(105, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Valores entre:";
+            this.label3.Text = "Valores superiores a:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 83);
+            this.label4.Location = new System.Drawing.Point(18, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Valores entre:";
+            this.label4.Text = "Valores superiores a:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnGuardar
@@ -220,13 +187,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.txtCopyV2);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.txtCopyV1);
-            this.groupBox1.Controls.Add(this.txtCopyV3);
+            this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
@@ -236,14 +197,9 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtCopyV4);
             this.groupBox1.Controls.Add(this.txtBitRateV3);
             this.groupBox1.Controls.Add(this.txtBitRateV4);
             this.groupBox1.Controls.Add(this.txtBitRateV2);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtBitRateV1);
             this.groupBox1.Controls.Add(this.label3);
@@ -255,66 +211,6 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clasificacion del Video en base a BitRate";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(316, 110);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 13);
-            this.label21.TabIndex = 28;
-            this.label21.Text = "kbp/s";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(316, 83);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 13);
-            this.label20.TabIndex = 27;
-            this.label20.Text = "kbp/s";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(316, 56);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 13);
-            this.label19.TabIndex = 26;
-            this.label19.Text = "kbp/s";
-            // 
-            // txtCopyV2
-            // 
-            this.txtCopyV2.Location = new System.Drawing.Point(251, 75);
-            this.txtCopyV2.Name = "txtCopyV2";
-            this.txtCopyV2.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyV2.TabIndex = 15;
-            this.txtCopyV2.TextChanged += new System.EventHandler(this.txtCopyV2_TextChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(193, 136);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 13);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "kbp/s";
-            // 
-            // txtCopyV1
-            // 
-            this.txtCopyV1.Location = new System.Drawing.Point(251, 49);
-            this.txtCopyV1.Name = "txtCopyV1";
-            this.txtCopyV1.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyV1.TabIndex = 14;
-            this.txtCopyV1.TextChanged += new System.EventHandler(this.txtCopyV1_TextChanged);
-            // 
-            // txtCopyV3
-            // 
-            this.txtCopyV3.Location = new System.Drawing.Point(251, 103);
-            this.txtCopyV3.Name = "txtCopyV3";
-            this.txtCopyV3.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyV3.TabIndex = 16;
-            this.txtCopyV3.TextChanged += new System.EventHandler(this.txtCopyV3_TextChanged);
             // 
             // label17
             // 
@@ -355,7 +251,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(403, 136);
+            this.label13.Location = new System.Drawing.Point(393, 136);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 13);
             this.label13.TabIndex = 20;
@@ -364,7 +260,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(403, 110);
+            this.label12.Location = new System.Drawing.Point(393, 110);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(36, 13);
             this.label12.TabIndex = 20;
@@ -373,7 +269,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(403, 83);
+            this.label11.Location = new System.Drawing.Point(393, 83);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 13);
             this.label11.TabIndex = 21;
@@ -382,7 +278,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(403, 56);
+            this.label10.Location = new System.Drawing.Point(393, 56);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 13);
             this.label10.TabIndex = 20;
@@ -391,55 +287,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(403, 29);
+            this.label9.Location = new System.Drawing.Point(393, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "=Muy Buena";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 136);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Valores inferiores a:";
-            // 
-            // txtCopyV4
-            // 
-            this.txtCopyV4.Location = new System.Drawing.Point(129, 129);
-            this.txtCopyV4.Name = "txtCopyV4";
-            this.txtCopyV4.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyV4.TabIndex = 17;
-            this.txtCopyV4.TextChanged += new System.EventHandler(this.txtCopyV4_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(230, 110);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(15, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = " y";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(230, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(15, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = " y";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(230, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = " y";
             // 
             // tabSetting
             // 
@@ -476,13 +328,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.txtCopyFrameV2);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Controls.Add(this.txtCopyFrameV1);
-            this.groupBox2.Controls.Add(this.txtCopyFrameV3);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.label28);
@@ -492,18 +341,10 @@
             this.groupBox2.Controls.Add(this.label32);
             this.groupBox2.Controls.Add(this.label33);
             this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.label35);
-            this.groupBox2.Controls.Add(this.txtCopyFrameV4);
             this.groupBox2.Controls.Add(this.txtFrameRateV3);
             this.groupBox2.Controls.Add(this.txtFrameRateV4);
             this.groupBox2.Controls.Add(this.txtFrameRateV2);
-            this.groupBox2.Controls.Add(this.label36);
-            this.groupBox2.Controls.Add(this.label37);
-            this.groupBox2.Controls.Add(this.label38);
-            this.groupBox2.Controls.Add(this.label39);
             this.groupBox2.Controls.Add(this.txtFrameRateV1);
-            this.groupBox2.Controls.Add(this.label40);
-            this.groupBox2.Controls.Add(this.label41);
             this.groupBox2.Controls.Add(this.label42);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
@@ -511,66 +352,6 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Clasificacion del Video en base a FrameRate";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(316, 110);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(21, 13);
-            this.label22.TabIndex = 28;
-            this.label22.Text = "fps";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(316, 83);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(21, 13);
-            this.label23.TabIndex = 27;
-            this.label23.Text = "fps";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(316, 56);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(21, 13);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "fps";
-            // 
-            // txtCopyFrameV2
-            // 
-            this.txtCopyFrameV2.Location = new System.Drawing.Point(251, 75);
-            this.txtCopyFrameV2.Name = "txtCopyFrameV2";
-            this.txtCopyFrameV2.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyFrameV2.TabIndex = 15;
-            this.txtCopyFrameV2.TextChanged += new System.EventHandler(this.txtCopyFrameV2_TextChanged);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(193, 136);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(21, 13);
-            this.label25.TabIndex = 25;
-            this.label25.Text = "fps";
-            // 
-            // txtCopyFrameV1
-            // 
-            this.txtCopyFrameV1.Location = new System.Drawing.Point(251, 49);
-            this.txtCopyFrameV1.Name = "txtCopyFrameV1";
-            this.txtCopyFrameV1.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyFrameV1.TabIndex = 14;
-            this.txtCopyFrameV1.TextChanged += new System.EventHandler(this.txtCopyFrameV1_TextChanged);
-            // 
-            // txtCopyFrameV3
-            // 
-            this.txtCopyFrameV3.Location = new System.Drawing.Point(251, 103);
-            this.txtCopyFrameV3.Name = "txtCopyFrameV3";
-            this.txtCopyFrameV3.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyFrameV3.TabIndex = 16;
-            this.txtCopyFrameV3.TextChanged += new System.EventHandler(this.txtCopyFrameV3_TextChanged);
             // 
             // label26
             // 
@@ -653,23 +434,6 @@
             this.label34.TabIndex = 19;
             this.label34.Text = "=Muy Buena";
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(18, 136);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(99, 13);
-            this.label35.TabIndex = 18;
-            this.label35.Text = "Valores inferiores a:";
-            // 
-            // txtCopyFrameV4
-            // 
-            this.txtCopyFrameV4.Location = new System.Drawing.Point(129, 129);
-            this.txtCopyFrameV4.Name = "txtCopyFrameV4";
-            this.txtCopyFrameV4.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyFrameV4.TabIndex = 17;
-            this.txtCopyFrameV4.TextChanged += new System.EventHandler(this.txtCopyFrameV4_TextChanged);
-            // 
             // txtFrameRateV3
             // 
             this.txtFrameRateV3.Location = new System.Drawing.Point(129, 76);
@@ -697,42 +461,6 @@
             this.txtFrameRateV2.TextChanged += new System.EventHandler(this.txtFrameRateV2_TextChanged);
             this.txtFrameRateV2.Leave += new System.EventHandler(this.txtFrameRateV2_Leave);
             // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(230, 110);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(15, 13);
-            this.label36.TabIndex = 13;
-            this.label36.Text = " y";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(230, 83);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(15, 13);
-            this.label37.TabIndex = 12;
-            this.label37.Text = " y";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(230, 56);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(15, 13);
-            this.label38.TabIndex = 11;
-            this.label38.Text = " y";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(47, 83);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(72, 13);
-            this.label39.TabIndex = 7;
-            this.label39.Text = "Valores entre:";
-            // 
             // txtFrameRateV1
             // 
             this.txtFrameRateV1.Location = new System.Drawing.Point(129, 23);
@@ -741,24 +469,6 @@
             this.txtFrameRateV1.TabIndex = 3;
             this.txtFrameRateV1.TextChanged += new System.EventHandler(this.txtFrameRateV1_TextChanged);
             this.txtFrameRateV1.Leave += new System.EventHandler(this.txtFrameRateV1_Leave);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(47, 56);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(72, 13);
-            this.label40.TabIndex = 6;
-            this.label40.Text = "Valores entre:";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(47, 110);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(72, 13);
-            this.label41.TabIndex = 4;
-            this.label41.Text = "Valores entre:";
             // 
             // label42
             // 
@@ -781,13 +491,10 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label43);
-            this.groupBox3.Controls.Add(this.label44);
-            this.groupBox3.Controls.Add(this.label45);
-            this.groupBox3.Controls.Add(this.txtCopyResolucionV2);
-            this.groupBox3.Controls.Add(this.label46);
-            this.groupBox3.Controls.Add(this.txtCopyResolucionV1);
-            this.groupBox3.Controls.Add(this.txtCopyResolucionV3);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label47);
             this.groupBox3.Controls.Add(this.label48);
             this.groupBox3.Controls.Add(this.label49);
@@ -797,18 +504,10 @@
             this.groupBox3.Controls.Add(this.label53);
             this.groupBox3.Controls.Add(this.label54);
             this.groupBox3.Controls.Add(this.label55);
-            this.groupBox3.Controls.Add(this.label56);
-            this.groupBox3.Controls.Add(this.txtCopyResolucionV4);
             this.groupBox3.Controls.Add(this.txtResolucionV3);
             this.groupBox3.Controls.Add(this.txtResolucionV4);
             this.groupBox3.Controls.Add(this.txtResolucionV2);
-            this.groupBox3.Controls.Add(this.label57);
-            this.groupBox3.Controls.Add(this.label58);
-            this.groupBox3.Controls.Add(this.label59);
-            this.groupBox3.Controls.Add(this.label60);
             this.groupBox3.Controls.Add(this.txtResolucionV1);
-            this.groupBox3.Controls.Add(this.label61);
-            this.groupBox3.Controls.Add(this.label62);
             this.groupBox3.Controls.Add(this.label63);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
@@ -816,66 +515,6 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Clasificacion del Video en base a Pixeles de alto";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(316, 110);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(42, 13);
-            this.label43.TabIndex = 28;
-            this.label43.Text = "px(Alto)";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(316, 83);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(42, 13);
-            this.label44.TabIndex = 27;
-            this.label44.Text = "px(Alto)";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(316, 56);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(42, 13);
-            this.label45.TabIndex = 26;
-            this.label45.Text = "px(Alto)";
-            // 
-            // txtCopyResolucionV2
-            // 
-            this.txtCopyResolucionV2.Location = new System.Drawing.Point(251, 75);
-            this.txtCopyResolucionV2.Name = "txtCopyResolucionV2";
-            this.txtCopyResolucionV2.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyResolucionV2.TabIndex = 15;
-            this.txtCopyResolucionV2.TextChanged += new System.EventHandler(this.txtCopyResolucionV2_TextChanged);
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(193, 136);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(42, 13);
-            this.label46.TabIndex = 25;
-            this.label46.Text = "px(Alto)";
-            // 
-            // txtCopyResolucionV1
-            // 
-            this.txtCopyResolucionV1.Location = new System.Drawing.Point(251, 49);
-            this.txtCopyResolucionV1.Name = "txtCopyResolucionV1";
-            this.txtCopyResolucionV1.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyResolucionV1.TabIndex = 14;
-            this.txtCopyResolucionV1.TextChanged += new System.EventHandler(this.txtCopyResolucionV1_TextChanged);
-            // 
-            // txtCopyResolucionV3
-            // 
-            this.txtCopyResolucionV3.Location = new System.Drawing.Point(251, 103);
-            this.txtCopyResolucionV3.Name = "txtCopyResolucionV3";
-            this.txtCopyResolucionV3.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyResolucionV3.TabIndex = 16;
-            this.txtCopyResolucionV3.TextChanged += new System.EventHandler(this.txtCopyResolucionV3_TextChanged);
             // 
             // label47
             // 
@@ -958,23 +597,6 @@
             this.label55.TabIndex = 19;
             this.label55.Text = "=Muy Buena";
             // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(18, 136);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(99, 13);
-            this.label56.TabIndex = 18;
-            this.label56.Text = "Valores inferiores a:";
-            // 
-            // txtCopyResolucionV4
-            // 
-            this.txtCopyResolucionV4.Location = new System.Drawing.Point(129, 129);
-            this.txtCopyResolucionV4.Name = "txtCopyResolucionV4";
-            this.txtCopyResolucionV4.Size = new System.Drawing.Size(59, 20);
-            this.txtCopyResolucionV4.TabIndex = 17;
-            this.txtCopyResolucionV4.TextChanged += new System.EventHandler(this.txtCopyResolucionV4_TextChanged);
-            // 
             // txtResolucionV3
             // 
             this.txtResolucionV3.Location = new System.Drawing.Point(129, 76);
@@ -1002,42 +624,6 @@
             this.txtResolucionV2.TextChanged += new System.EventHandler(this.txtResolucionV2_TextChanged);
             this.txtResolucionV2.Leave += new System.EventHandler(this.txtResolucionV2_Leave);
             // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(230, 110);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(15, 13);
-            this.label57.TabIndex = 13;
-            this.label57.Text = " y";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(230, 83);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(15, 13);
-            this.label58.TabIndex = 12;
-            this.label58.Text = " y";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(230, 56);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(15, 13);
-            this.label59.TabIndex = 11;
-            this.label59.Text = " y";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(47, 83);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(72, 13);
-            this.label60.TabIndex = 7;
-            this.label60.Text = "Valores entre:";
-            // 
             // txtResolucionV1
             // 
             this.txtResolucionV1.Location = new System.Drawing.Point(129, 23);
@@ -1046,24 +632,6 @@
             this.txtResolucionV1.TabIndex = 3;
             this.txtResolucionV1.TextChanged += new System.EventHandler(this.txtResolucionV1_TextChanged);
             this.txtResolucionV1.Leave += new System.EventHandler(this.txtResolucionV1_Leave);
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(47, 56);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(72, 13);
-            this.label61.TabIndex = 6;
-            this.label61.Text = "Valores entre:";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(47, 110);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(72, 13);
-            this.label62.TabIndex = 4;
-            this.label62.Text = "Valores entre:";
             // 
             // label63
             // 
@@ -1084,6 +652,87 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Valores superiores a:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Valores superiores a:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 13);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Valores superiores a:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 52);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Valores superiores a:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(18, 79);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 13);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Valores superiores a:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(18, 106);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(105, 13);
+            this.label19.TabIndex = 27;
+            this.label19.Text = "Valores superiores a:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(18, 136);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 13);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "Valores inferiores:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(18, 136);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(90, 13);
+            this.label21.TabIndex = 29;
+            this.label21.Text = "Valores inferiores:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(18, 136);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(90, 13);
+            this.label22.TabIndex = 29;
+            this.label22.Text = "Valores inferiores:";
+            // 
             // settingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1094,7 +743,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "settingsForm";
-            this.Text = "settingsForm";
+            this.Text = "Configuracion de valores de calidad";
             this.Load += new System.EventHandler(this.settingsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1122,23 +771,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtCopyV4;
-        private System.Windows.Forms.TextBox txtCopyV3;
-        private System.Windows.Forms.TextBox txtCopyV2;
-        private System.Windows.Forms.TextBox txtCopyV1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -1148,13 +785,6 @@
         private System.Windows.Forms.TabPage tabFrameRate;
         private System.Windows.Forms.TabPage tabResolucion;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtCopyFrameV2;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtCopyFrameV1;
-        private System.Windows.Forms.TextBox txtCopyFrameV3;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
@@ -1164,27 +794,12 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox txtCopyFrameV4;
         private System.Windows.Forms.TextBox txtFrameRateV3;
         private System.Windows.Forms.TextBox txtFrameRateV4;
         private System.Windows.Forms.TextBox txtFrameRateV2;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtFrameRateV1;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox txtCopyResolucionV2;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox txtCopyResolucionV1;
-        private System.Windows.Forms.TextBox txtCopyResolucionV3;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
@@ -1194,19 +809,20 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox txtCopyResolucionV4;
         private System.Windows.Forms.TextBox txtResolucionV3;
         private System.Windows.Forms.TextBox txtResolucionV4;
         private System.Windows.Forms.TextBox txtResolucionV2;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label60;
         private System.Windows.Forms.TextBox txtResolucionV1;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label8;
     }
 }
