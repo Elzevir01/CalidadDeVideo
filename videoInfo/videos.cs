@@ -109,7 +109,7 @@ namespace videoInfo
         {
             return ancho + " x " + alto+" "+Calidad169();
         }
-        public string CalidadPromedioDeVideo()
+        /*public string CalidadPromedioDeVideo()
         {
             string calidad = "";
 
@@ -201,6 +201,23 @@ namespace videoInfo
 
             return res;
         }
+        public int CalidadAppConfig(int valor, int v1, int v2, int v3, int v4)
+        {
+            int res = 0;
+
+            if (valor >= v1)
+                res = 100;
+            if (valor >= v2 && valor < v1)
+                res = 75;
+            if (valor >= v3 && valor < v2)
+                res = 50;
+            if (valor >= v4 && valor < v3)
+                res = 25;
+            if (valor < v4)
+                res = 0;
+
+            return res;
+        }*/
         public string toStringDimension()
         {
             string dime = "";
@@ -209,7 +226,7 @@ namespace videoInfo
 
             return dime;
         }
-        public string PreInforme()
+        public string PreInforme(string CalidadPromedio)
         {
             string informe = "";
             string inicio = "Que en cuanto a la calidad del material filmico, nos encontramos con un video";
@@ -222,7 +239,7 @@ namespace videoInfo
             else
                 bitrateText = "";
 
-            string final = ". Estos valores anuncian una "+ CalidadPromedioDeVideo() + " calidad del material para la compulsa.";
+            string final = ". Estos valores anuncian una "+ CalidadPromedio + " calidad del material para la compulsa.";
 
 
             informe = inicio+tamanioText+framerateText+bitrateText+final;

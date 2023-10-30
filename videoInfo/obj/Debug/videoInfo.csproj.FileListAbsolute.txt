@@ -19,3 +19,4 @@ C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.csproj.CopyC
 C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\ExtensionMethods.dll
 C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\ExtensionMethods.pdb
 C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\ExtensionMethods.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.settingsForm.resources

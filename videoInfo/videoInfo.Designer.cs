@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAbrir = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(videoInfo));
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.txtC1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblC2 = new System.Windows.Forms.Label();
             this.lblCGeneral = new System.Windows.Forms.Label();
             this.lblGeneral = new System.Windows.Forms.Label();
             this.lblVBitRate = new System.Windows.Forms.Label();
@@ -70,26 +70,20 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.rTxtInforme = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnCopiar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnConfigurar = new System.Windows.Forms.Button();
             this.btnRegenerarTexto = new System.Windows.Forms.Button();
+            this.btnCopiar = new System.Windows.Forms.Button();
+            this.btnAbrir = new System.Windows.Forms.Button();
             this.grpDatos.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnAbrir
-            // 
-            this.btnAbrir.Location = new System.Drawing.Point(10, 23);
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(565, 23);
-            this.btnAbrir.TabIndex = 0;
-            this.btnAbrir.Text = "Abrir Video";
-            this.btnAbrir.UseVisualStyleBackColor = true;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
-            // 
             // grpDatos
             // 
-            this.grpDatos.Controls.Add(this.label14);
+            this.grpDatos.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.grpDatos.Controls.Add(this.txtC1);
             this.grpDatos.Controls.Add(this.label12);
-            this.grpDatos.Controls.Add(this.label11);
+            this.grpDatos.Controls.Add(this.lblC2);
             this.grpDatos.Controls.Add(this.lblCGeneral);
             this.grpDatos.Controls.Add(this.lblGeneral);
             this.grpDatos.Controls.Add(this.lblVBitRate);
@@ -124,7 +118,7 @@
             this.grpDatos.Controls.Add(this.lblDuracion);
             this.grpDatos.Controls.Add(this.label2);
             this.grpDatos.Controls.Add(this.label1);
-            this.grpDatos.Location = new System.Drawing.Point(10, 52);
+            this.grpDatos.Location = new System.Drawing.Point(10, 64);
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Size = new System.Drawing.Size(565, 244);
             this.grpDatos.TabIndex = 2;
@@ -132,14 +126,14 @@
             this.grpDatos.Text = "Info de Video";
             this.grpDatos.Enter += new System.EventHandler(this.grpDatos_Enter);
             // 
-            // label14
+            // txtC1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(436, 123);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 13);
-            this.label14.TabIndex = 48;
-            this.label14.Text = "Calidad:";
+            this.txtC1.AutoSize = true;
+            this.txtC1.Location = new System.Drawing.Point(436, 123);
+            this.txtC1.Name = "txtC1";
+            this.txtC1.Size = new System.Drawing.Size(45, 13);
+            this.txtC1.TabIndex = 48;
+            this.txtC1.Text = "Calidad:";
             // 
             // label12
             // 
@@ -150,14 +144,14 @@
             this.label12.TabIndex = 47;
             this.label12.Text = "Calidad:";
             // 
-            // label11
+            // lblC2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(436, 146);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 13);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Calidad:";
+            this.lblC2.AutoSize = true;
+            this.lblC2.Location = new System.Drawing.Point(436, 146);
+            this.lblC2.Name = "lblC2";
+            this.lblC2.Size = new System.Drawing.Size(45, 13);
+            this.lblC2.TabIndex = 6;
+            this.lblC2.Text = "Calidad:";
             // 
             // lblCGeneral
             // 
@@ -470,55 +464,98 @@
             // 
             // rTxtInforme
             // 
-            this.rTxtInforme.Location = new System.Drawing.Point(10, 316);
+            this.rTxtInforme.Location = new System.Drawing.Point(92, 327);
             this.rTxtInforme.Name = "rTxtInforme";
-            this.rTxtInforme.Size = new System.Drawing.Size(565, 53);
+            this.rTxtInforme.Size = new System.Drawing.Size(402, 67);
             this.rTxtInforme.TabIndex = 4;
             this.rTxtInforme.Text = "";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 299);
+            this.label10.Location = new System.Drawing.Point(99, 311);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 13);
             this.label10.TabIndex = 5;
             this.label10.Text = "Pre Informe:";
             // 
-            // btnCopiar
+            // label11
             // 
-            this.btnCopiar.Location = new System.Drawing.Point(476, 376);
-            this.btnCopiar.Name = "btnCopiar";
-            this.btnCopiar.Size = new System.Drawing.Size(102, 23);
-            this.btnCopiar.TabIndex = 6;
-            this.btnCopiar.Text = "Copiar Texto";
-            this.btnCopiar.UseVisualStyleBackColor = true;
-            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(20, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(161, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Abrir o Arrastrar archivo de video";
+            // 
+            // btnConfigurar
+            // 
+            this.btnConfigurar.Image = global::videoInfo.Properties.Resources.ajuste_2_;
+            this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConfigurar.Location = new System.Drawing.Point(505, 6);
+            this.btnConfigurar.Name = "btnConfigurar";
+            this.btnConfigurar.Size = new System.Drawing.Size(73, 54);
+            this.btnConfigurar.TabIndex = 8;
+            this.btnConfigurar.Text = "Configurar";
+            this.btnConfigurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfigurar.UseVisualStyleBackColor = true;
+            this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
             // 
             // btnRegenerarTexto
             // 
-            this.btnRegenerarTexto.Location = new System.Drawing.Point(10, 375);
+            this.btnRegenerarTexto.Image = global::videoInfo.Properties.Resources.actualizar_flecha;
+            this.btnRegenerarTexto.Location = new System.Drawing.Point(10, 327);
             this.btnRegenerarTexto.Name = "btnRegenerarTexto";
-            this.btnRegenerarTexto.Size = new System.Drawing.Size(102, 23);
+            this.btnRegenerarTexto.Size = new System.Drawing.Size(76, 67);
             this.btnRegenerarTexto.TabIndex = 7;
-            this.btnRegenerarTexto.Text = "Regenerar Texto";
+            this.btnRegenerarTexto.Text = "Recargar";
+            this.btnRegenerarTexto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegenerarTexto.UseVisualStyleBackColor = true;
             this.btnRegenerarTexto.Click += new System.EventHandler(this.btnRegenerarTexto_Click);
+            // 
+            // btnCopiar
+            // 
+            this.btnCopiar.Image = global::videoInfo.Properties.Resources.copiar_2__2_;
+            this.btnCopiar.Location = new System.Drawing.Point(500, 329);
+            this.btnCopiar.Name = "btnCopiar";
+            this.btnCopiar.Size = new System.Drawing.Size(75, 65);
+            this.btnCopiar.TabIndex = 6;
+            this.btnCopiar.Text = "Copiar Texto";
+            this.btnCopiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCopiar.UseVisualStyleBackColor = true;
+            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
+            // 
+            // btnAbrir
+            // 
+            this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
+            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAbrir.Location = new System.Drawing.Point(402, 6);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(73, 54);
+            this.btnAbrir.TabIndex = 0;
+            this.btnAbrir.Text = "Abrir Video";
+            this.btnAbrir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // videoInfo
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 411);
+            this.ClientSize = new System.Drawing.Size(590, 406);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnConfigurar);
             this.Controls.Add(this.btnRegenerarTexto);
             this.Controls.Add(this.btnCopiar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.rTxtInforme);
             this.Controls.Add(this.grpDatos);
             this.Controls.Add(this.btnAbrir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "videoInfo";
-            this.Text = "videoInfo";
+            this.Text = "Calidad de Video";
             this.Load += new System.EventHandler(this.videoInfo_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.videoInfo_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.videoInfo_DragEnter);
@@ -570,11 +607,13 @@
         private System.Windows.Forms.Label lblBitRate;
         private System.Windows.Forms.Label lblCGeneral;
         private System.Windows.Forms.Label lblGeneral;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblC2;
+        private System.Windows.Forms.Label txtC1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCopiar;
         private System.Windows.Forms.Button btnRegenerarTexto;
+        private System.Windows.Forms.Button btnConfigurar;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -6,7 +6,7 @@ using NReco.VideoInfo;
 
 using ExtensionMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-
+using System.Collections.Generic;
 
 namespace videoInfo
 {
@@ -16,7 +16,13 @@ namespace videoInfo
         FFProbe ffProbe;
         string[] archivos;
         string tipoPeso;
-        
+
+        string preInforme;
+
+        PruebaDeCalidad pr;
+
+
+
 
         public videoInfo()
         {
@@ -40,20 +46,31 @@ namespace videoInfo
 
         private void OpenFileDialogForm()
         {
-            //Abrir cuadro de dialogode busqueda de archivo de video
-            //OpenFileDialog dialog = new OpenFileDialog();
-            openFileDialog.Title = "Abrir video";
-            openFileDialog.Filter = "Archivos de Video|*.mp4;*.wmv;*.mov;*.mp4;*.flv;*.avi;*.webm;*.mkv;*.f4v;*.dav;*.usm;*.asf";
-            openFileDialog.DefaultExt = "video";
-            openFileDialog.FileName = "";
-            openFileDialog.ShowDialog();
-
-            FileInfo fileInfo = new FileInfo(openFileDialog.FileName);
-
-            if (File.Exists(fileInfo.FullName))
+            try
             {
-                VideoInfoO(fileInfo);
+                //Abrir cuadro de dialogode busqueda de archivo de video
+                openFileDialog.Title = "Abrir video";
+                openFileDialog.Filter = "Archivos de Video|*.mp4;*.wmv;*.mov;*.mp4;*.flv;*.avi;*.webm;*.mkv;*.f4v;*.dav;*.usm;*.asf";
+                openFileDialog.DefaultExt = "video";
+                openFileDialog.FileName = "";
+                openFileDialog.ShowDialog();
 
+                //if (openFileDialog.FileName != null | openFileDialog.FileName != "")
+                //{
+                FileInfo fileInfo;
+
+                    if (File.Exists(openFileDialog.FileName))//File.Exists(fileInfo.FullName)
+                {
+                        fileInfo = new FileInfo(openFileDialog.FileName);
+                        VideoInfoO(fileInfo);
+
+                    }
+                //}
+            }catch (Exception e)
+            {
+                
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
             }
         }
 
@@ -62,54 +79,71 @@ namespace videoInfo
 
         private videos VideoInfoO(FileInfo fil)
         {
-            //inicializar objeto de la clase videos
-            vid = new videos();
+            habilitarBotones(false);
+            try
+            {
+                //inicializar objeto de la clase videos
+                vid = new videos();
 
-            //peso del archivo
-            long fileSizeInBytes = fil.Length;
+                //peso del archivo
+                long fileSizeInBytes = fil.Length;
 
-            //MediaInfoDotNet
-            var MediaFile = new MediaFile(fil.FullName);
-            var fileMediaStr = MediaFile.Video[0];
-            //NReco.VideoInfo
-            ffProbe = new FFProbe();
-            //problema con usm
-            var fileNReco = ffProbe.GetMediaInfo(fil.FullName);
+                //MediaInfoDotNet
+                var MediaFile = new MediaFile(fil.FullName);
+                var fileMediaStr = MediaFile.Video[0];
+                //NReco.VideoInfo
+                ffProbe = new FFProbe();
 
-            //ingresar datos al objeto videos
-            vid.Nombre = fil.Name;
-            vid.Direccion = fil.FullName;
-            if (fileMediaStr.Duration == null | fileMediaStr.Duration <1)
-            {
-                vid.Duracion = fileNReco.Duration;
-            }
-            else
-            {
-                vid.Duracion = TimeSpan.FromMilliseconds(fileMediaStr.Duration);
-            }
-            vid.Ancho = fileMediaStr.width;
-            vid.Alto = fileMediaStr.height;
 
-            if (fileMediaStr.bitRate == null | fileMediaStr.bitRate == "")
-            {
-                vid.BitRate = 0; ;
+                //ingresar datos al objeto videos
+                vid.Nombre = fil.Name;
+                vid.Direccion = fil.FullName;
+
+                //en algunos formatos mediaInfo no captura el tiempo, en caso de formato USM usar NReco
+                if (fileMediaStr.Duration < 1 && ultimosTres(fil.Name) != "usm")
+                {
+                    var fileNReco = ffProbe.GetMediaInfo(fil.FullName);
+                    vid.Duracion = fileNReco.Duration;
+                }
+                else
+                {
+                    vid.Duracion = TimeSpan.FromMilliseconds(fileMediaStr.Duration);
+                }
+                vid.Ancho = fileMediaStr.width;
+                vid.Alto = fileMediaStr.height;
+
+                if (fileMediaStr.bitRate == null | fileMediaStr.bitRate == "")
+                {
+
+                    vid.BitRate = 0;
+                    calidadLbl(false);
+                }
+                else
+                {
+                    vid.BitRate = (Convert.ToInt32(fileMediaStr.bitRate)) / 1000;
+                    calidadLbl(true);
+
+                }
+                vid.FrameRate = Convert.ToInt32(fileMediaStr.frameRate);
+
+                //Especificar la escala de peso del archivo MB o KB
+                if (fileSizeInBytes > 1048576)
+                {
+                    tipoPeso = "MB";
+                    vid.Peso = (fileSizeInBytes / 1048576);
+                }
+                else
+                {
+                    tipoPeso = "KB";
+                    vid.Peso = fileSizeInBytes / 1048;
+                }
+                MostrarInfVideos(vid);
             }
-            else
-            {
-                vid.BitRate = (Convert.ToInt32(fileMediaStr.bitRate)) / 1000;
-                
+            catch(Exception e){
+                MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            vid.FrameRate = Convert.ToInt32(fileMediaStr.frameRate);
-            if (fileSizeInBytes> 1048576) {
-                tipoPeso = "MB";
-                vid.Peso = (fileSizeInBytes / 1048576);
-            }
-            else
-            {
-                tipoPeso = "KB";
-                vid.Peso = fileSizeInBytes/1048;
-            }
-            MostrarInfVideos(vid);
+
+            
 
             
 
@@ -118,6 +152,9 @@ namespace videoInfo
         }
         private void MostrarInfVideos(videos vi)
         {
+            habilitarBotones(false);
+            //inicializar clase de PruebaDeCalidad
+            pr = new PruebaDeCalidad();
             //Mostrar info de video
             lblVNombre.Text = vi.Nombre;
             lblVDireccion.Text = vi.Direccion;
@@ -130,20 +167,22 @@ namespace videoInfo
             lblVPeso.Text = Convert.ToString(vi.Peso) + " "+ tipoPeso ;
 
             //Mostrar evaluacion de video
-            lblCDimensiones.Text = vi.CalidadIndividual(vi.CalidadResolucion());
-            lblCBitRate.Text = vi.CalidadIndividual(vi.CalidadBitRate());
-            lblCFrameRate.Text = vi.CalidadIndividual(vi.CalidadFrameRate());
+            //lblCDimensiones.Text = vi.CalidadIndividual(vi.CalidadResolucion());
+            lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(vi.Alto)));
+            //lblCBitRate.Text = vi.CalidadIndividual(vi.CalidadBitRate());
+            lblCBitRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadBitRate(vi.BitRate)));
+            //lblCFrameRate.Text = vi.CalidadIndividual(vi.CalidadFrameRate());
+            lblCFrameRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadFrameRate(vi.FrameRate)));
 
-            lblCGeneral.Text = vi.CalidadPromedioDeVideo();
+            //lblCGeneral.Text = vi.CalidadPromedioDeVideo();
+            //lblCGeneral.Text = Convert.ToString(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto));
+            preInforme = "";
+            preInforme = vi.PreInforme(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto));
+            lblCGeneral.Text = pr.CalidadPromedioDeVideo(vi.BitRate,vi.FrameRate, vi.Alto);
+            rTxtInforme.Clear();
+            rTxtInforme.Text = preInforme;
 
-            rTxtInforme.Text = "";
-            rTxtInforme.Text = vi.PreInforme();
-
-        }
-        public void FfmpegBitRate(FileInfo fil)
-        {
-           
-
+            habilitarBotones(true);
         }
 
         private void videoInfo_DragDrop(object sender, DragEventArgs e)
@@ -152,8 +191,15 @@ namespace videoInfo
             archivos = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             var fileInfo = new FileInfo(archivos[0]);
 
-            VideoInfoO(fileInfo);
-
+            //*.mp4;*.wmv;*.mov;*.mp4;*.flv;*.avi;*.webm;*.mkv;*.f4v;*.dav;*.usm;*.asf"
+            List<string> formatos = new List<string> {"mp4","wmv", "mov", "flv", "avi", "webm", "mkv", "f4v", "dav", "usm", "asf"};
+            if ( formatos.Contains(ultimosTres(fileInfo.Name)) ) {
+                VideoInfoO(fileInfo);
+            }
+            else
+            {
+                MessageBox.Show("Solo archivos de video", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
@@ -168,13 +214,46 @@ namespace videoInfo
             if (rTxtInforme.Text != "")
                 Clipboard.SetDataObject(rTxtInforme.Text);
             else
-                rTxtInforme.Text = "No text selected in textBox1";
+                rTxtInforme.Text = "";
         }
 
         private void btnRegenerarTexto_Click(object sender, EventArgs e)
         {
             //mostrar de nuevo el segmento de informe
-            rTxtInforme.Text = vid.PreInforme();
+            rTxtInforme.Clear();
+            rTxtInforme.Text =preInforme;
+        }
+        public string ultimosTres(string archivo)
+        {
+            string ultimosTres = archivo;
+            int longitud = archivo.Length;
+
+            if (longitud >= 3)
+            {
+                ultimosTres = archivo.Substring(longitud - 3);
+               
+            }
+            return ultimosTres;
+        }
+
+        private void btnConfigurar_Click(object sender, EventArgs e)
+        {
+            var settingsform = new settingsForm();
+            settingsform.Show();
+
+        }
+        public void calidadLbl(bool x)
+        {
+            lblVBitRate.Visible = x;
+            lblCBitRate.Visible = x;
+
+        }
+        public void habilitarBotones(bool x)
+        {
+            btnAbrir.Enabled = x;
+            btnConfigurar.Enabled = x;
+            btnRegenerarTexto.Enabled = x;
+            btnCopiar.Enabled = x;
         }
     }
 }
