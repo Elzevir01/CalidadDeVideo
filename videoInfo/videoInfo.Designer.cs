@@ -75,6 +75,7 @@
             this.btnRegenerarTexto = new System.Windows.Forms.Button();
             this.btnCopiar = new System.Windows.Forms.Button();
             this.btnAbrir = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.grpDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -538,12 +539,22 @@
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 401);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Version alternativa.";
+            // 
             // videoInfo
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 406);
+            this.ClientSize = new System.Drawing.Size(590, 419);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnConfigurar);
             this.Controls.Add(this.btnRegenerarTexto);
@@ -614,6 +625,7 @@
         private System.Windows.Forms.Button btnRegenerarTexto;
         private System.Windows.Forms.Button btnConfigurar;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label14;
     }
 }
 

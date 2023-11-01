@@ -116,7 +116,7 @@ namespace videoInfo
 
             //calidad = "Sin Determinar";
 
-            return calidad+Convert.ToString(calidadDe);
+            return calidad;// +Convert.ToString(calidadDe);
         }
         public string CalidadPromedioDeVideo(int bitrate, int framerate, int resolucion)
         {

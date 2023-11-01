@@ -48,35 +48,36 @@ namespace videoInfo
         {
            
             string bitratev1 = ConfigurationManager.AppSettings["bitrate-v1"];
-            string bitratev2 = ConfigurationManager.AppSettings["bitrate-v2"];
+            /*string bitratev2 = ConfigurationManager.AppSettings["bitrate-v2"];
             string bitratev3 = ConfigurationManager.AppSettings["bitrate-v3"];
-            string bitratev4 = ConfigurationManager.AppSettings["bitrate-v4"];
+            string bitratev4 = ConfigurationManager.AppSettings["bitrate-v4"];*/
 
             string frameratev1 = ConfigurationManager.AppSettings["framerate-v1"];
-            string frameratev2 = ConfigurationManager.AppSettings["framerate-v2"];
+            /*string frameratev2 = ConfigurationManager.AppSettings["framerate-v2"];
             string frameratev3 = ConfigurationManager.AppSettings["framerate-v3"];
-            string frameratev4 = ConfigurationManager.AppSettings["framerate-v4"];
+            string frameratev4 = ConfigurationManager.AppSettings["framerate-v4"];*/
 
             string resolucionv1 = ConfigurationManager.AppSettings["resolucion-v1"];
-            string resolucionv2 = ConfigurationManager.AppSettings["resolucion-v2"];
+            /*string resolucionv2 = ConfigurationManager.AppSettings["resolucion-v2"];
             string resolucionv3 = ConfigurationManager.AppSettings["resolucion-v3"];
-            string resolucionv4 = ConfigurationManager.AppSettings["resolucion-v4"];
+            string resolucionv4 = ConfigurationManager.AppSettings["resolucion-v4"];*/
 
             txtBitRateV1.Text = bitratev1;
-            txtBitRateV2.Text = bitratev2;
+            /*txtBitRateV2.Text = bitratev2;
             txtBitRateV3.Text = bitratev3;
-            txtBitRateV4.Text = bitratev4;
+            txtBitRateV4.Text = bitratev4;*/
 
             txtFrameRateV1.Text = frameratev1;
-            txtFrameRateV2.Text = frameratev2;
+            /*txtFrameRateV2.Text = frameratev2;
             txtFrameRateV3.Text = frameratev3;
-            txtFrameRateV4.Text = frameratev4;
+            txtFrameRateV4.Text = frameratev4;*/
 
             txtResolucionV1.Text = resolucionv1;
-            txtResolucionV2.Text = resolucionv2;
+            /*txtResolucionV2.Text = resolucionv2;
             txtResolucionV3.Text = resolucionv3;
-            txtResolucionV4.Text = resolucionv4;
+            txtResolucionV4.Text = resolucionv4;*/
 
+            //rchTextBox.Text = "Estos valores representan una calidad un tope de calidad, a partir de estos , la calidad se considerara como 'Muy Buena' calidad.";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -85,19 +86,19 @@ namespace videoInfo
             config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
             config.AppSettings.Settings["bitrate-v1"].Value = txtBitRateV1.Text;
-            config.AppSettings.Settings["bitrate-v2"].Value = txtBitRateV2.Text;
+            /*config.AppSettings.Settings["bitrate-v2"].Value = txtBitRateV2.Text;
             config.AppSettings.Settings["bitrate-v3"].Value = txtBitRateV3.Text;
-            config.AppSettings.Settings["bitrate-v4"].Value = txtBitRateV4.Text;
+            config.AppSettings.Settings["bitrate-v4"].Value = txtBitRateV4.Text;*/
 
             config.AppSettings.Settings["resolucion-v1"].Value = txtResolucionV1.Text;
-            config.AppSettings.Settings["resolucion-v2"].Value = txtResolucionV2.Text;
+            /*config.AppSettings.Settings["resolucion-v2"].Value = txtResolucionV2.Text;
             config.AppSettings.Settings["resolucion-v3"].Value = txtResolucionV3.Text;
-            config.AppSettings.Settings["resolucion-v4"].Value = txtResolucionV4.Text;
+            config.AppSettings.Settings["resolucion-v4"].Value = txtResolucionV4.Text;*/
 
             config.AppSettings.Settings["framerate-v1"].Value = txtFrameRateV1.Text;
-            config.AppSettings.Settings["framerate-v2"].Value = txtFrameRateV2.Text;
+            /*config.AppSettings.Settings["framerate-v2"].Value = txtFrameRateV2.Text;
             config.AppSettings.Settings["framerate-v3"].Value = txtFrameRateV3.Text;
-            config.AppSettings.Settings["framerate-v4"].Value = txtFrameRateV4.Text;
+            config.AppSettings.Settings["framerate-v4"].Value = txtFrameRateV4.Text;*/
 
             // Guarda los cambios en el archivo de configuración
             config.Save(ConfigurationSaveMode.Modified);
@@ -298,62 +299,62 @@ namespace videoInfo
 
         private void txtBitRateV2_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtBitRateV2,txtBitRateV1, txtBitRateV3);
+            //validarNumero(txtBitRateV2,txtBitRateV1, txtBitRateV3);
         }
 
         private void txtBitRateV3_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtBitRateV3, txtBitRateV2, txtBitRateV4);
+            //validarNumero(txtBitRateV3, txtBitRateV2, txtBitRateV4);
         }
 
         private void txtBitRateV4_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtBitRateV4, txtBitRateV3, null);
+            //validarNumero(txtBitRateV4, txtBitRateV3, null);
         }
 
         private void txtBitRateV1_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtBitRateV1, null, txtBitRateV2);
+            //validarNumero(txtBitRateV1, null, txtBitRateV2);
         }
 
         private void txtFrameRateV1_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtFrameRateV1, null, txtFrameRateV2);
+            //validarNumero(txtFrameRateV1, null, txtFrameRateV2);
         }
 
         private void txtFrameRateV2_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtFrameRateV2, txtFrameRateV1, txtFrameRateV3);
+            //validarNumero(txtFrameRateV2, txtFrameRateV1, txtFrameRateV3);
         }
 
         private void txtFrameRateV3_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtFrameRateV3, txtFrameRateV2, txtFrameRateV4);
+            //validarNumero(txtFrameRateV3, txtFrameRateV2, txtFrameRateV4);
         }
 
         private void txtFrameRateV4_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtFrameRateV4, txtFrameRateV3, null);
+            //validarNumero(txtFrameRateV4, txtFrameRateV3, null);
         }
 
         private void txtResolucionV1_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtResolucionV1, null, txtResolucionV2);
+            //validarNumero(txtResolucionV1, null, txtResolucionV2);
         }
 
         private void txtResolucionV2_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtResolucionV2, txtResolucionV1, txtResolucionV3);
+            //validarNumero(txtResolucionV2, txtResolucionV1, txtResolucionV3);
         }
 
         private void txtResolucionV3_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtResolucionV3, txtResolucionV2, txtResolucionV4);
+            //validarNumero(txtResolucionV3, txtResolucionV2, txtResolucionV4);
         }
 
         private void txtResolucionV4_Leave(object sender, EventArgs e)
         {
-            validarNumero(txtResolucionV4, txtResolucionV3, null);
+            //validarNumero(txtResolucionV4, txtResolucionV3, null);
         }
     }
 }
