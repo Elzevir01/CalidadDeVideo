@@ -81,15 +81,15 @@ namespace videoInfo
             string calidad = "";
 
 
-            if (calidadDe >= 80)
+            if (calidadDe >= 100)
                 calidad = "Muy Buena";
-            if (calidadDe >= 60 && calidadDe < 80)
+            if (calidadDe >= 75 && calidadDe < 100)
                 calidad = "Buena";
-            if (calidadDe >= 40 && calidadDe < 60)
+            if (calidadDe >= 50 && calidadDe < 75)
                 calidad = "Aceptable";
-            if (calidadDe >= 20 && calidadDe < 40)
+            if (calidadDe >= 25 && calidadDe < 50)
                 calidad = "Mala";
-            if (calidadDe < 20)
+            if (calidadDe < 25)
                 calidad = "Muy Mala";
             if (calidad == "")
                 calidad = "Sin Determinar";
@@ -110,15 +110,15 @@ namespace videoInfo
 
             double puntuacion;
             puntuacion = (CalidadBitRate(bitrate) + CalidadFrameRate(framerate) + CalidadResolucion(resolucion)) / cantidadCalidad;
-            if (puntuacion >= 80)
+            if (puntuacion >= 100)
                 calidad = "Muy Buena";
-            if (puntuacion >= 60 && puntuacion < 80)
+            if (puntuacion >= 75 && puntuacion < 100)
                 calidad = "Buena";
-            if (puntuacion >= 40 && puntuacion < 60)
+            if (puntuacion >= 50 && puntuacion < 75)
                 calidad = "Aceptable";
-            if (puntuacion >= 20 && puntuacion < 40)
+            if (puntuacion >= 25 && puntuacion < 50)
                 calidad = "Mala";
-            if (puntuacion < 20)
+            if (puntuacion < 25)
                 calidad = "Muy Mala";
             if (calidad == "")
                 calidad = "Sin Determinar";
