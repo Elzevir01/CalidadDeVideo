@@ -92,7 +92,7 @@ namespace videoInfo
             string calidad = "";
 
 
-            if (calidadDe >= 100)
+            /*if (calidadDe >= 100)
                 calidad = "Muy Buena";
             if (calidadDe >= 75 && calidadDe < 100)
                 calidad = "Buena";
@@ -102,8 +102,19 @@ namespace videoInfo
                 calidad = "Mala";
             if (calidadDe < 25)
                 calidad = "Muy Mala";
-            if (calidad == "")
-                calidad = "Sin Determinar";
+            if (calidad == "")*/
+            if (calidadDe < 25)
+                calidad = "muy mala";
+            if (calidadDe >= 25)
+                calidad = "Mala";
+            if (calidadDe >= 50)
+                calidad = "Aceptable";
+            if (calidadDe >= 75)
+                calidad = "Buena";
+            if (calidadDe >=100)
+                calidad = "Muy Buena";
+
+            //calidad = "Sin Determinar";
 
             return calidad+Convert.ToString(calidadDe);
         }
@@ -121,7 +132,7 @@ namespace videoInfo
 
             double puntuacion;
             puntuacion = (CalidadBitRate(bitrate) + CalidadFrameRate(framerate) + CalidadResolucion(resolucion)) / cantidadCalidad;
-            if (puntuacion >= 100)
+            /*if (puntuacion >= 100)
                 calidad = "Muy Buena";
             if (puntuacion >= 75 && puntuacion < 100)
                 calidad = "Buena";
@@ -132,8 +143,9 @@ namespace videoInfo
             if (puntuacion < 25)
                 calidad = "Muy Mala";
             if (calidad == "")
-                calidad = "Sin Determinar";
-
+                calidad = "Sin Determinar";*/
+            
+            calidad = CalidadIndividual(Convert.ToInt16(puntuacion));
             return calidad;
         }
 
