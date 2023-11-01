@@ -27,9 +27,12 @@ namespace videoInfo
 
         public int CalidadBitRate(int bitRate)
         {
+            //variable de calidad
             int bit = 0;
+            int valorMaximo = 100;
 
-            if (bitRate >= bitratev1)
+
+            /*if (bitRate >= bitratev1)
                 bit = 100;
             if (bitRate >= bitratev2 && bitRate < bitratev1)
                 bit = 75;
@@ -38,14 +41,17 @@ namespace videoInfo
             if (bitRate >= bitratev4 && bitRate < bitratev3)
                 bit = 25;
             if (bitRate < bitratev4)
-                bit = 0;
+                bit = 0;*/
+
+            bit = (bitRate * valorMaximo) / bitratev1;
 
             return bit;
         }
         public int CalidadResolucion(int resolucionAlto)
         {
             int res = 0;
-
+            int valorMaximo = 100;
+            /*
             if (resolucionAlto >= resolucionv1)
                 res = 100;
             if (resolucionAlto >= resolucionv2 && resolucionAlto < resolucionv1)
@@ -55,15 +61,18 @@ namespace videoInfo
             if (resolucionAlto >= resolucionv4 && resolucionAlto < resolucionv3)
                 res = 25;
             if (resolucionAlto < resolucionv4)
-                res = 0;
+                res = 0;*/
+
+            res = (resolucionAlto * valorMaximo) / resolucionv1;
 
             return res;
         }
         public int CalidadFrameRate(int frameRate)
         {
             int frame = 0;
+            int valorMaximo = 100;
 
-            if (frameRate >= frameratev1)
+            /*if (frameRate >= frameratev1)
                 frame = 100;
             if (frameRate >= frameratev2 && frameRate < frameratev1)
                 frame = 75;
@@ -72,7 +81,9 @@ namespace videoInfo
             if (frameRate >= frameratev4 && frameRate < frameratev3)
                 frame = 25;
             if (frameRate < frameratev4)
-                frame = 0;
+                frame = 0;*/
+
+            frame = (frameRate * valorMaximo) / frameratev1;
 
             return frame;
         }
@@ -94,7 +105,7 @@ namespace videoInfo
             if (calidad == "")
                 calidad = "Sin Determinar";
 
-            return calidad;
+            return calidad+Convert.ToString(calidadDe);
         }
         public string CalidadPromedioDeVideo(int bitrate, int framerate, int resolucion)
         {
