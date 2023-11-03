@@ -53,9 +53,9 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(335, 274);
+            this.btnGuardar.Location = new System.Drawing.Point(296, 274);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(100, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(136, 23);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             this.btnCancelar.Location = new System.Drawing.Point(5, 274);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(100, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(136, 23);
             this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Descartar Cambios";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 

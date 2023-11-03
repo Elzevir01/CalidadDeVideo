@@ -493,7 +493,7 @@
             // 
             this.btnConfigurar.Image = global::videoInfo.Properties.Resources.ajuste_2_;
             this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConfigurar.Location = new System.Drawing.Point(505, 6);
+            this.btnConfigurar.Location = new System.Drawing.Point(502, 6);
             this.btnConfigurar.Name = "btnConfigurar";
             this.btnConfigurar.Size = new System.Drawing.Size(73, 54);
             this.btnConfigurar.TabIndex = 8;
@@ -530,7 +530,7 @@
             // 
             this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
             this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAbrir.Location = new System.Drawing.Point(402, 6);
+            this.btnAbrir.Location = new System.Drawing.Point(386, 6);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(73, 54);
             this.btnAbrir.TabIndex = 0;
@@ -555,7 +555,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 406);
+            this.ClientSize = new System.Drawing.Size(588, 406);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnConfigurar);

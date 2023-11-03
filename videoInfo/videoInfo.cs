@@ -167,15 +167,11 @@ namespace videoInfo
             lblVPeso.Text = Convert.ToString(vi.Peso) + " "+ tipoPeso ;
 
             //Mostrar evaluacion de video
-            //lblCDimensiones.Text = vi.CalidadIndividual(vi.CalidadResolucion());
             lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(vi.Alto)));
-            //lblCBitRate.Text = vi.CalidadIndividual(vi.CalidadBitRate());
             lblCBitRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadBitRate(vi.BitRate)));
-            //lblCFrameRate.Text = vi.CalidadIndividual(vi.CalidadFrameRate());
             lblCFrameRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadFrameRate(vi.FrameRate)));
 
-            //lblCGeneral.Text = vi.CalidadPromedioDeVideo();
-            //lblCGeneral.Text = Convert.ToString(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto));
+            //Carga el texto de informe
             preInforme = "";
             preInforme = vi.PreInforme(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto));
             lblCGeneral.Text = pr.CalidadPromedioDeVideo(vi.BitRate,vi.FrameRate, vi.Alto);
