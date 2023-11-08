@@ -27,11 +27,11 @@ namespace videoInfo
         public videoInfo()
         {
             InitializeComponent();
+
         }
 
         private void videoInfo_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void grpDatos_Enter(object sender, EventArgs e)
@@ -80,6 +80,8 @@ namespace videoInfo
         private videos VideoInfoO(FileInfo fil)
         {
             habilitarBotones(false);
+            this.Cursor = Cursors.WaitCursor;
+            
             try
             {
                 //inicializar objeto de la clase videos
@@ -179,6 +181,7 @@ namespace videoInfo
             rTxtInforme.Text = preInforme;
 
             habilitarBotones(true);
+            this.Cursor = Cursors.Default;
         }
 
         private void videoInfo_DragDrop(object sender, DragEventArgs e)
@@ -235,7 +238,7 @@ namespace videoInfo
         private void btnConfigurar_Click(object sender, EventArgs e)
         {
             var settingsform = new settingsForm();
-            settingsform.Show();
+            settingsform.ShowDialog();
 
         }
         public void calidadLbl(bool x)
@@ -250,6 +253,23 @@ namespace videoInfo
             btnConfigurar.Enabled = x;
             btnRegenerarTexto.Enabled = x;
             btnCopiar.Enabled = x;
+        }
+
+        private void abrirVideoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialogForm();
+        }
+
+        private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void acercaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           var creditos = new Creditos();
+           creditos.ShowDialog();
+
         }
     }
 }

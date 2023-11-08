@@ -121,8 +121,11 @@
   <data name="ajuste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\ajuste.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ajuste(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\ajuste(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="actualizar-flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\actualizar-flecha.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clip-de-video48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\clip-de-video48.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ajuste(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\ajuste(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +133,14 @@
   <data name="copiar(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\copiar(2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="actualizar-flecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\actualizar-flecha.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mensaje(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\mensaje(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ajuste(1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\ajuste(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copiar(2)(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\copiar(2)(2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="video(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\video(1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,7 +148,10 @@
   <data name="ajuste(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\ajuste(2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="copiar(2)(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\copiar(2)(2).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\github.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clip-de-video48v" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\clip-de-video48v.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

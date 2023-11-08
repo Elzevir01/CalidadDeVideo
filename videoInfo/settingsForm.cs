@@ -49,6 +49,9 @@ namespace videoInfo
             config.AppSettings.Settings["framerate-v1"].Value = txtFrameRateV1.Text;
             config.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
+            MessageBox.Show("Datos guardados", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+
 
         }
 

@@ -113,6 +113,26 @@ namespace videoInfo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clip_de_video48 {
+            get {
+                object obj = ResourceManager.GetObject("clip-de-video48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clip_de_video48v {
+            get {
+                object obj = ResourceManager.GetObject("clip-de-video48v", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copiar_2_ {
             get {
                 object obj = ResourceManager.GetObject("copiar(2)", resourceCulture);
@@ -126,6 +146,26 @@ namespace videoInfo.Properties {
         internal static System.Drawing.Bitmap copiar_2__2_ {
             get {
                 object obj = ResourceManager.GetObject("copiar(2)(2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap github {
+            get {
+                object obj = ResourceManager.GetObject("github", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mensaje_1_ {
+            get {
+                object obj = ResourceManager.GetObject("mensaje(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

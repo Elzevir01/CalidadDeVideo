@@ -53,7 +53,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(296, 274);
+            this.btnGuardar.Location = new System.Drawing.Point(295, 267);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(136, 23);
             this.btnGuardar.TabIndex = 8;
@@ -63,7 +63,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(5, 274);
+            this.btnCancelar.Location = new System.Drawing.Point(4, 267);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 23);
             this.btnCancelar.TabIndex = 12;
@@ -77,7 +77,7 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(5, 65);
+            this.panel1.Location = new System.Drawing.Point(5, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(430, 200);
             this.panel1.TabIndex = 30;
@@ -197,18 +197,20 @@
             // 
             this.rchTextBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.rchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rchTextBox.Location = new System.Drawing.Point(5, 12);
+            this.rchTextBox.Location = new System.Drawing.Point(5, 7);
             this.rchTextBox.Name = "rchTextBox";
             this.rchTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.rchTextBox.Size = new System.Drawing.Size(427, 47);
             this.rchTextBox.TabIndex = 32;
-            this.rchTextBox.Text = resources.GetString("rchTextBox.Text");
+            this.rchTextBox.Text = "Los valores de referencia seran aquellos que udsted considere como una buena cali" +
+    "dad de video, los videos se clasificaran midiendo la diferencia de estos valores" +
+    " y los del material ingrasado.\n";
             // 
             // settingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 303);
+            this.ClientSize = new System.Drawing.Size(443, 295);
             this.Controls.Add(this.rchTextBox);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);
