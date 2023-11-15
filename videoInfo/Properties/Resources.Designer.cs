@@ -63,9 +63,9 @@ namespace videoInfo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap actualizar_flecha {
+        internal static System.Drawing.Bitmap carpeta {
             get {
-                object obj = ResourceManager.GetObject("actualizar-flecha", resourceCulture);
+                object obj = ResourceManager.GetObject("carpeta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace videoInfo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ajuste {
+        internal static System.Drawing.Bitmap engranaje_de_ajuste16 {
             get {
-                object obj = ResourceManager.GetObject("ajuste", resourceCulture);
+                object obj = ResourceManager.GetObject("engranaje-de-ajuste16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace videoInfo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ajuste_1_ {
+        internal static System.Drawing.Bitmap engranaje_de_ajuste32 {
             get {
-                object obj = ResourceManager.GetObject("ajuste(1)", resourceCulture);
+                object obj = ResourceManager.GetObject("engranaje-de-ajuste32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,59 +93,9 @@ namespace videoInfo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ajuste_1_1 {
+        internal static System.Drawing.Bitmap engranaje_de_ajuste64 {
             get {
-                object obj = ResourceManager.GetObject("ajuste(1)1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ajuste_2_ {
-            get {
-                object obj = ResourceManager.GetObject("ajuste(2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap clip_de_video48 {
-            get {
-                object obj = ResourceManager.GetObject("clip-de-video48", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap clip_de_video48v {
-            get {
-                object obj = ResourceManager.GetObject("clip-de-video48v", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap copiar_2_ {
-            get {
-                object obj = ResourceManager.GetObject("copiar(2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap copiar_2__2_ {
-            get {
-                object obj = ResourceManager.GetObject("copiar(2)(2)", resourceCulture);
+                object obj = ResourceManager.GetObject("engranaje-de-ajuste64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,19 +113,9 @@ namespace videoInfo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mensaje_1_ {
+        internal static System.Drawing.Bitmap portapapeles {
             get {
-                object obj = ResourceManager.GetObject("mensaje(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap video_1_ {
-            get {
-                object obj = ResourceManager.GetObject("video(1)", resourceCulture);
+                object obj = ResourceManager.GetObject("portapapeles", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
