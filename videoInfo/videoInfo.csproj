@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>clip-de-video48v.ico</ApplicationIcon>
+    <ApplicationIcon>pelicula64.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExtensionMethods, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -49,6 +49,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +66,11 @@
     </Compile>
     <Compile Include="Creditos.Designer.cs">
       <DependentUpon>Creditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="PruebaDeCalidad.cs" />
     <Compile Include="settingsForm.cs">
@@ -93,14 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="MediaInfoDotNet.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -120,23 +121,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\actualizar-flecha.ico" />
-    <Content Include="Assets\ajuste%281%29.ico" />
-    <Content Include="Assets\ajuste%282%29.ico" />
-    <Content Include="Assets\ajuste.ico" />
-    <Content Include="Assets\ajuste.png" />
-    <Content Include="Assets\carpeta%281%29.ico" />
-    <Content Include="Assets\carpeta%282%29.ico" />
-    <Content Include="Assets\carpeta.ico" />
+    <None Include="Assets\carpeta%281%29.png" />
+    <None Include="Assets\clip-de-video32 - copia.ico" />
+    <None Include="Assets\carpeta.ico" />
     <Content Include="Assets\clip-de-video32.ico" />
+    <None Include="Assets\clip-de-video32v.ico" />
     <Content Include="Assets\clip-de-video48.ico" />
     <None Include="Assets\clip-de-video48v.ico" />
-    <Content Include="Assets\copiar%282%29%281%29.ico" />
-    <Content Include="Assets\copiar%282%29%282%29.ico" />
-    <Content Include="Assets\copiar%282%29.ico" />
-    <Content Include="Assets\github.ico" />
-    <Content Include="Assets\mensaje%281%29.ico" />
-    <Content Include="Assets\video%281%29.ico" />
+    <None Include="Assets\engranaje-de-ajuste64.png" />
+    <None Include="Assets\engranaje-de-ajuste32.png" />
+    <None Include="Assets\engranaje-de-ajuste16.png" />
+    <None Include="Assets\portapapeles.png" />
     <Content Include="clip-de-video48v.ico" />
+    <Content Include="pelicula64.ico" />
     <Content Include="x64\MediaInfo.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

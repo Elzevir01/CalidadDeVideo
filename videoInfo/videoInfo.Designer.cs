@@ -523,12 +523,15 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abrirVideoToolStripMenuItem,
             this.cerrarToolStripMenuItem});
+            this.archivoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // abrirVideoToolStripMenuItem
             // 
+            this.abrirVideoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirVideoToolStripMenuItem.Image")));
+            this.abrirVideoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.abrirVideoToolStripMenuItem.Name = "abrirVideoToolStripMenuItem";
             this.abrirVideoToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.abrirVideoToolStripMenuItem.Text = "Abrir Video";
@@ -536,6 +539,7 @@
             // 
             // cerrarToolStripMenuItem
             // 
+            this.cerrarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarToolStripMenuItem.Image")));
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
             this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
@@ -551,6 +555,7 @@
             // 
             // acercaToolStripMenuItem
             // 
+            this.acercaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaToolStripMenuItem.Image")));
             this.acercaToolStripMenuItem.Name = "acercaToolStripMenuItem";
             this.acercaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.acercaToolStripMenuItem.Text = "Acerca de Calidad de Video";
@@ -558,7 +563,7 @@
             // 
             // btnConfigurar
             // 
-            this.btnConfigurar.Image = global::videoInfo.Properties.Resources.ajuste_2_;
+            this.btnConfigurar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfigurar.Image")));
             this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnConfigurar.Location = new System.Drawing.Point(502, 40);
             this.btnConfigurar.Name = "btnConfigurar";
@@ -571,7 +576,7 @@
             // 
             // btnRegenerarTexto
             // 
-            this.btnRegenerarTexto.Image = global::videoInfo.Properties.Resources.actualizar_flecha;
+            this.btnRegenerarTexto.Image = ((System.Drawing.Image)(resources.GetObject("btnRegenerarTexto.Image")));
             this.btnRegenerarTexto.Location = new System.Drawing.Point(10, 361);
             this.btnRegenerarTexto.Name = "btnRegenerarTexto";
             this.btnRegenerarTexto.Size = new System.Drawing.Size(76, 67);
@@ -583,7 +588,7 @@
             // 
             // btnCopiar
             // 
-            this.btnCopiar.Image = global::videoInfo.Properties.Resources.copiar_2__2_;
+            this.btnCopiar.Image = global::videoInfo.Properties.Resources.portapapeles;
             this.btnCopiar.Location = new System.Drawing.Point(500, 363);
             this.btnCopiar.Name = "btnCopiar";
             this.btnCopiar.Size = new System.Drawing.Size(75, 65);
