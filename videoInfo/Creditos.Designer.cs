@@ -30,11 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Creditos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblGitHub = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -42,11 +45,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblGitHub = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -56,20 +56,49 @@
             // 
             this.groupBox1.Controls.Add(this.lblGitHub);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(161, 84);
+            this.groupBox1.Location = new System.Drawing.Point(161, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(224, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contacto del Desarrollador";
             // 
+            // lblGitHub
+            // 
+            this.lblGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGitHub.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblGitHub.Image = ((System.Drawing.Image)(resources.GetObject("lblGitHub.Image")));
+            this.lblGitHub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGitHub.Location = new System.Drawing.Point(9, 16);
+            this.lblGitHub.Name = "lblGitHub";
+            this.lblGitHub.Size = new System.Drawing.Size(185, 41);
+            this.lblGitHub.TabIndex = 0;
+            this.lblGitHub.Text = "https://github.com/Elzevir01";
+            this.lblGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblGitHub.Click += new System.EventHandler(this.lblGitHub_Click);
+            // 
+            // label1
+            // 
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(9, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 41);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "elzevir01@protonmail.com";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(161, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(224, 66);
+            this.groupBox2.Size = new System.Drawing.Size(224, 46);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acerca del Software";
@@ -77,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 37);
+            this.label3.Location = new System.Drawing.Point(12, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 13);
             this.label3.TabIndex = 1;
@@ -90,7 +119,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Version: 1.1";
+            this.label2.Text = "Version: 1.3";
             // 
             // groupBox3
             // 
@@ -104,20 +133,42 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(161, 190);
+            this.groupBox3.Location = new System.Drawing.Point(161, 170);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(224, 104);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Assets";
+            this.groupBox3.Text = "Origenes de Assets";
             // 
-            // label5
+            // label14
             // 
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Location = new System.Drawing.Point(10, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 22);
-            this.label5.TabIndex = 0;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label14.Image = ((System.Drawing.Image)(resources.GetObject("label14.Image")));
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label14.Location = new System.Drawing.Point(174, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 36);
+            this.label14.TabIndex = 10;
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label13
+            // 
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(133, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 36);
+            this.label13.TabIndex = 9;
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
@@ -224,6 +275,14 @@
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
+            // label5
+            // 
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label5.Location = new System.Drawing.Point(10, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 22);
+            this.label5.TabIndex = 0;
+            // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("DecoType Thuluth", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -236,72 +295,13 @@
             this.label4.Text = "Calidad de Video";
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // lblGitHub
-            // 
-            this.lblGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblGitHub.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGitHub.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblGitHub.Image = ((System.Drawing.Image)(resources.GetObject("lblGitHub.Image")));
-            this.lblGitHub.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblGitHub.Location = new System.Drawing.Point(9, 16);
-            this.lblGitHub.Name = "lblGitHub";
-            this.lblGitHub.Size = new System.Drawing.Size(185, 41);
-            this.lblGitHub.TabIndex = 0;
-            this.lblGitHub.Text = "https://github.com/Elzevir01";
-            this.lblGitHub.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblGitHub.Click += new System.EventHandler(this.lblGitHub_Click);
-            // 
-            // label1
-            // 
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(9, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "elzevir01@protonmail.com";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label13
-            // 
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label13.Image = ((System.Drawing.Image)(resources.GetObject("label13.Image")));
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(133, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(38, 36);
-            this.label13.TabIndex = 9;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label14
-            // 
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label14.Image = ((System.Drawing.Image)(resources.GetObject("label14.Image")));
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label14.Location = new System.Drawing.Point(174, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 36);
-            this.label14.TabIndex = 10;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
             // Creditos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(430, 299);
+            this.ClientSize = new System.Drawing.Size(430, 283);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
@@ -314,6 +314,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
