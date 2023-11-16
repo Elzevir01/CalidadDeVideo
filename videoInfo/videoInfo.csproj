@@ -121,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\actualizar-flecha.ico" />
-    <None Include="Assets\carpeta%281%29.png" />
     <None Include="Assets\clip-de-video32 - copia.ico" />
     <None Include="Assets\carpeta.ico" />
     <Content Include="Assets\clip-de-video32.ico" />
@@ -132,7 +131,6 @@
     <None Include="Assets\engranaje-de-ajuste32.png" />
     <None Include="Assets\engranaje-de-ajuste16.png" />
     <None Include="Assets\portapapeles.png" />
-    <Content Include="clip-de-video48v.ico" />
     <Content Include="pelicula64.ico" />
     <Content Include="x64\MediaInfo.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
