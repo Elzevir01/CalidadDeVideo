@@ -29,8 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(videoInfo));
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnConfigurar = new System.Windows.Forms.Button();
+            this.btnAbrir = new System.Windows.Forms.Button();
+            this.panelGeneral = new System.Windows.Forms.Panel();
+            this.btnRegenerarTexto = new System.Windows.Forms.Button();
+            this.btnCopiar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.rTxtInforme = new System.Windows.Forms.RichTextBox();
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.txtC1 = new System.Windows.Forms.Label();
+            this.lblAbrirArrastrar = new System.Windows.Forms.Label();
+            this.lblC1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblC2 = new System.Windows.Forms.Label();
             this.lblCGeneral = new System.Windows.Forms.Label();
@@ -63,33 +78,158 @@
             this.lblDivisor = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblDimension = new System.Windows.Forms.Label();
             this.lblDuracion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.rTxtInforme = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirVideoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnConfigurar = new System.Windows.Forms.Button();
-            this.btnRegenerarTexto = new System.Windows.Forms.Button();
-            this.btnCopiar = new System.Windows.Forms.Button();
-            this.btnAbrir = new System.Windows.Forms.Button();
-            this.grpDatos.SuspendLayout();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.panelGeneral.SuspendLayout();
+            this.grpDatos.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(588, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirVideoToolStripMenuItem,
+            this.cerrarToolStripMenuItem});
+            this.archivoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // abrirVideoToolStripMenuItem
+            // 
+            this.abrirVideoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirVideoToolStripMenuItem.Image")));
+            this.abrirVideoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.abrirVideoToolStripMenuItem.Name = "abrirVideoToolStripMenuItem";
+            this.abrirVideoToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.abrirVideoToolStripMenuItem.Text = "Abrir Video";
+            this.abrirVideoToolStripMenuItem.Click += new System.EventHandler(this.abrirVideoToolStripMenuItem_Click);
+            // 
+            // cerrarToolStripMenuItem
+            // 
+            this.cerrarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarToolStripMenuItem.Image")));
+            this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.cerrarToolStripMenuItem.Text = "Cerrar";
+            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // acercaToolStripMenuItem
+            // 
+            this.acercaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaToolStripMenuItem.Image")));
+            this.acercaToolStripMenuItem.Name = "acercaToolStripMenuItem";
+            this.acercaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.acercaToolStripMenuItem.Text = "Acerca de Calidad de Video";
+            this.acercaToolStripMenuItem.Click += new System.EventHandler(this.acercaToolStripMenuItem_Click);
+            // 
+            // btnConfigurar
+            // 
+            this.btnConfigurar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfigurar.Image")));
+            this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnConfigurar.Location = new System.Drawing.Point(504, 12);
+            this.btnConfigurar.Name = "btnConfigurar";
+            this.btnConfigurar.Size = new System.Drawing.Size(73, 54);
+            this.btnConfigurar.TabIndex = 8;
+            this.btnConfigurar.Text = "Configurar";
+            this.btnConfigurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfigurar.UseVisualStyleBackColor = true;
+            this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
+            // 
+            // btnAbrir
+            // 
+            this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
+            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAbrir.Location = new System.Drawing.Point(211, 12);
+            this.btnAbrir.Name = "btnAbrir";
+            this.btnAbrir.Size = new System.Drawing.Size(146, 54);
+            this.btnAbrir.TabIndex = 0;
+            this.btnAbrir.Text = "Abrir Video";
+            this.btnAbrir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAbrir.UseVisualStyleBackColor = true;
+            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
+            // 
+            // panelGeneral
+            // 
+            this.panelGeneral.Controls.Add(this.btnRegenerarTexto);
+            this.panelGeneral.Controls.Add(this.btnCopiar);
+            this.panelGeneral.Controls.Add(this.label10);
+            this.panelGeneral.Controls.Add(this.rTxtInforme);
+            this.panelGeneral.Controls.Add(this.grpDatos);
+            this.panelGeneral.Controls.Add(this.btnAbrir);
+            this.panelGeneral.Controls.Add(this.btnConfigurar);
+            this.panelGeneral.Location = new System.Drawing.Point(0, 27);
+            this.panelGeneral.Name = "panelGeneral";
+            this.panelGeneral.Size = new System.Drawing.Size(588, 409);
+            this.panelGeneral.TabIndex = 12;
+            this.panelGeneral.DragLeave += new System.EventHandler(this.panelGeneral_DragLeave);
+            // 
+            // btnRegenerarTexto
+            // 
+            this.btnRegenerarTexto.Image = ((System.Drawing.Image)(resources.GetObject("btnRegenerarTexto.Image")));
+            this.btnRegenerarTexto.Location = new System.Drawing.Point(12, 335);
+            this.btnRegenerarTexto.Name = "btnRegenerarTexto";
+            this.btnRegenerarTexto.Size = new System.Drawing.Size(76, 67);
+            this.btnRegenerarTexto.TabIndex = 13;
+            this.btnRegenerarTexto.Text = "Recargar";
+            this.btnRegenerarTexto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRegenerarTexto.UseVisualStyleBackColor = true;
+            // 
+            // btnCopiar
+            // 
+            this.btnCopiar.Image = global::videoInfo.Properties.Resources.portapapeles;
+            this.btnCopiar.Location = new System.Drawing.Point(502, 337);
+            this.btnCopiar.Name = "btnCopiar";
+            this.btnCopiar.Size = new System.Drawing.Size(75, 65);
+            this.btnCopiar.TabIndex = 12;
+            this.btnCopiar.Text = "Copiar Texto";
+            this.btnCopiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCopiar.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(101, 319);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Pre Informe:";
+            // 
+            // rTxtInforme
+            // 
+            this.rTxtInforme.Location = new System.Drawing.Point(94, 335);
+            this.rTxtInforme.Name = "rTxtInforme";
+            this.rTxtInforme.Size = new System.Drawing.Size(402, 67);
+            this.rTxtInforme.TabIndex = 10;
+            this.rTxtInforme.Text = "";
             // 
             // grpDatos
             // 
             this.grpDatos.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.grpDatos.Controls.Add(this.txtC1);
+            this.grpDatos.Controls.Add(this.lblAbrirArrastrar);
+            this.grpDatos.Controls.Add(this.lblC1);
             this.grpDatos.Controls.Add(this.label12);
             this.grpDatos.Controls.Add(this.lblC2);
             this.grpDatos.Controls.Add(this.lblCGeneral);
@@ -122,26 +262,35 @@
             this.grpDatos.Controls.Add(this.lblDivisor);
             this.grpDatos.Controls.Add(this.label4);
             this.grpDatos.Controls.Add(this.label5);
-            this.grpDatos.Controls.Add(this.lbl);
+            this.grpDatos.Controls.Add(this.lblDimension);
             this.grpDatos.Controls.Add(this.lblDuracion);
             this.grpDatos.Controls.Add(this.label2);
-            this.grpDatos.Controls.Add(this.label1);
-            this.grpDatos.Location = new System.Drawing.Point(10, 98);
+            this.grpDatos.Controls.Add(this.lblNombre);
+            this.grpDatos.Location = new System.Drawing.Point(12, 72);
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Size = new System.Drawing.Size(565, 244);
-            this.grpDatos.TabIndex = 2;
+            this.grpDatos.TabIndex = 9;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Info de Video";
-            this.grpDatos.Enter += new System.EventHandler(this.grpDatos_Enter);
             // 
-            // txtC1
+            // lblAbrirArrastrar
             // 
-            this.txtC1.AutoSize = true;
-            this.txtC1.Location = new System.Drawing.Point(436, 123);
-            this.txtC1.Name = "txtC1";
-            this.txtC1.Size = new System.Drawing.Size(45, 13);
-            this.txtC1.TabIndex = 48;
-            this.txtC1.Text = "Calidad:";
+            this.lblAbrirArrastrar.AutoSize = true;
+            this.lblAbrirArrastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbrirArrastrar.Location = new System.Drawing.Point(57, 108);
+            this.lblAbrirArrastrar.Name = "lblAbrirArrastrar";
+            this.lblAbrirArrastrar.Size = new System.Drawing.Size(468, 31);
+            this.lblAbrirArrastrar.TabIndex = 9;
+            this.lblAbrirArrastrar.Text = "Abrir o Arrastrar archivo de video aqui";
+            // 
+            // lblC1
+            // 
+            this.lblC1.AutoSize = true;
+            this.lblC1.Location = new System.Drawing.Point(436, 123);
+            this.lblC1.Name = "lblC1";
+            this.lblC1.Size = new System.Drawing.Size(45, 13);
+            this.lblC1.TabIndex = 48;
+            this.lblC1.Text = "Calidad:";
             // 
             // label12
             // 
@@ -430,14 +579,14 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Fotogramas/Segundo:";
             // 
-            // lbl
+            // lblDimension
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(20, 123);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(70, 13);
-            this.lbl.TabIndex = 15;
-            this.lbl.Text = "Dimensiones:";
+            this.lblDimension.AutoSize = true;
+            this.lblDimension.Location = new System.Drawing.Point(20, 123);
+            this.lblDimension.Name = "lblDimension";
+            this.lblDimension.Size = new System.Drawing.Size(70, 13);
+            this.lblDimension.TabIndex = 15;
+            this.lblDimension.Text = "Dimensiones:";
             // 
             // lblDuracion
             // 
@@ -457,159 +606,14 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Direccion:";
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Nombre:";
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            // 
-            // rTxtInforme
-            // 
-            this.rTxtInforme.Location = new System.Drawing.Point(92, 361);
-            this.rTxtInforme.Name = "rTxtInforme";
-            this.rTxtInforme.Size = new System.Drawing.Size(402, 67);
-            this.rTxtInforme.TabIndex = 4;
-            this.rTxtInforme.Text = "";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(99, 345);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Pre Informe:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(20, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(161, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Abrir o Arrastrar archivo de video";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(224, 43);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Version alternativa.";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(588, 24);
-            this.menuStrip1.TabIndex = 11;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirVideoToolStripMenuItem,
-            this.cerrarToolStripMenuItem});
-            this.archivoToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // abrirVideoToolStripMenuItem
-            // 
-            this.abrirVideoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirVideoToolStripMenuItem.Image")));
-            this.abrirVideoToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.abrirVideoToolStripMenuItem.Name = "abrirVideoToolStripMenuItem";
-            this.abrirVideoToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.abrirVideoToolStripMenuItem.Text = "Abrir Video";
-            this.abrirVideoToolStripMenuItem.Click += new System.EventHandler(this.abrirVideoToolStripMenuItem_Click);
-            // 
-            // cerrarToolStripMenuItem
-            // 
-            this.cerrarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cerrarToolStripMenuItem.Image")));
-            this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.cerrarToolStripMenuItem.Text = "Cerrar";
-            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acercaToolStripMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // acercaToolStripMenuItem
-            // 
-            this.acercaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaToolStripMenuItem.Image")));
-            this.acercaToolStripMenuItem.Name = "acercaToolStripMenuItem";
-            this.acercaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.acercaToolStripMenuItem.Text = "Acerca de Calidad de Video";
-            this.acercaToolStripMenuItem.Click += new System.EventHandler(this.acercaToolStripMenuItem_Click);
-            // 
-            // btnConfigurar
-            // 
-            this.btnConfigurar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfigurar.Image")));
-            this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConfigurar.Location = new System.Drawing.Point(502, 40);
-            this.btnConfigurar.Name = "btnConfigurar";
-            this.btnConfigurar.Size = new System.Drawing.Size(73, 54);
-            this.btnConfigurar.TabIndex = 8;
-            this.btnConfigurar.Text = "Configurar";
-            this.btnConfigurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConfigurar.UseVisualStyleBackColor = true;
-            this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
-            // 
-            // btnRegenerarTexto
-            // 
-            this.btnRegenerarTexto.Image = ((System.Drawing.Image)(resources.GetObject("btnRegenerarTexto.Image")));
-            this.btnRegenerarTexto.Location = new System.Drawing.Point(10, 361);
-            this.btnRegenerarTexto.Name = "btnRegenerarTexto";
-            this.btnRegenerarTexto.Size = new System.Drawing.Size(76, 67);
-            this.btnRegenerarTexto.TabIndex = 7;
-            this.btnRegenerarTexto.Text = "Recargar";
-            this.btnRegenerarTexto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRegenerarTexto.UseVisualStyleBackColor = true;
-            this.btnRegenerarTexto.Click += new System.EventHandler(this.btnRegenerarTexto_Click);
-            // 
-            // btnCopiar
-            // 
-            this.btnCopiar.Image = global::videoInfo.Properties.Resources.portapapeles;
-            this.btnCopiar.Location = new System.Drawing.Point(500, 363);
-            this.btnCopiar.Name = "btnCopiar";
-            this.btnCopiar.Size = new System.Drawing.Size(75, 65);
-            this.btnCopiar.TabIndex = 6;
-            this.btnCopiar.Text = "Copiar Texto";
-            this.btnCopiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCopiar.UseVisualStyleBackColor = true;
-            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
-            // 
-            // btnAbrir
-            // 
-            this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
-            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAbrir.Location = new System.Drawing.Point(386, 40);
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(73, 54);
-            this.btnAbrir.TabIndex = 0;
-            this.btnAbrir.Text = "Abrir Video";
-            this.btnAbrir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAbrir.UseVisualStyleBackColor = true;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(20, 34);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.TabIndex = 12;
+            this.lblNombre.Text = "Nombre:";
             // 
             // videoInfo
             // 
@@ -617,15 +621,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 436);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnConfigurar);
-            this.Controls.Add(this.btnRegenerarTexto);
-            this.Controls.Add(this.btnCopiar);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.rTxtInforme);
-            this.Controls.Add(this.grpDatos);
-            this.Controls.Add(this.btnAbrir);
+            this.Controls.Add(this.panelGeneral);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -635,10 +631,13 @@
             this.Load += new System.EventHandler(this.videoInfo_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.videoInfo_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.videoInfo_DragEnter);
-            this.grpDatos.ResumeLayout(false);
-            this.grpDatos.PerformLayout();
+            this.DragLeave += new System.EventHandler(this.videoInfo_DragLeave);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelGeneral.ResumeLayout(false);
+            this.panelGeneral.PerformLayout();
+            this.grpDatos.ResumeLayout(false);
+            this.grpDatos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,15 +646,40 @@
         #endregion
 
         private System.Windows.Forms.Button btnAbrir;
-        private System.Windows.Forms.GroupBox grpDatos;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Label lblDuracion;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblDivisor;
+        private System.Windows.Forms.Button btnConfigurar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abrirVideoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaToolStripMenuItem;
+        private System.Windows.Forms.Panel panelGeneral;
+        private System.Windows.Forms.Button btnRegenerarTexto;
+        private System.Windows.Forms.Button btnCopiar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RichTextBox rTxtInforme;
+        private System.Windows.Forms.GroupBox grpDatos;
+        private System.Windows.Forms.Label lblAbrirArrastrar;
+        private System.Windows.Forms.Label lblC1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblC2;
+        private System.Windows.Forms.Label lblCGeneral;
+        private System.Windows.Forms.Label lblGeneral;
+        private System.Windows.Forms.Label lblVBitRate;
+        private System.Windows.Forms.Label lblCBitRate;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblVAspectRatio;
+        private System.Windows.Forms.Label lblCAspectRatio;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblBitRate;
+        private System.Windows.Forms.Label lblVPeso;
+        private System.Windows.Forms.Label lblVFrameRate;
+        private System.Windows.Forms.Label lblVDimensiones;
+        private System.Windows.Forms.Label lblVDuracion;
+        private System.Windows.Forms.Label lblVDireccion;
+        private System.Windows.Forms.Label lblVNombre;
         private System.Windows.Forms.Label lblCPeso;
         private System.Windows.Forms.Label lblCFrameRate;
         private System.Windows.Forms.Label lblCDimensiones;
@@ -667,38 +691,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblVPeso;
-        private System.Windows.Forms.Label lblVFrameRate;
-        private System.Windows.Forms.Label lblVDimensiones;
-        private System.Windows.Forms.Label lblVDuracion;
-        private System.Windows.Forms.Label lblVDireccion;
-        private System.Windows.Forms.Label lblVNombre;
-        private System.Windows.Forms.RichTextBox rTxtInforme;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblVBitRate;
-        private System.Windows.Forms.Label lblCBitRate;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lblVAspectRatio;
-        private System.Windows.Forms.Label lblCAspectRatio;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblBitRate;
-        private System.Windows.Forms.Label lblCGeneral;
-        private System.Windows.Forms.Label lblGeneral;
-        private System.Windows.Forms.Label lblC2;
-        private System.Windows.Forms.Label txtC1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnCopiar;
-        private System.Windows.Forms.Button btnRegenerarTexto;
-        private System.Windows.Forms.Button btnConfigurar;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem abrirVideoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acercaToolStripMenuItem;
+        private System.Windows.Forms.Label lblDivisor;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDimension;
+        private System.Windows.Forms.Label lblDuracion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNombre;
     }
 }
 

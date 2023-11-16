@@ -7,6 +7,7 @@ using NReco.VideoInfo;
 using ExtensionMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace videoInfo
 {
@@ -32,6 +33,9 @@ namespace videoInfo
 
         private void videoInfo_Load(object sender, EventArgs e)
         {
+            datosVisibles(false);
+            calidadFrameRate(false);
+            calidadBitRate(false);
         }
 
         private void grpDatos_Enter(object sender, EventArgs e)
@@ -59,18 +63,18 @@ namespace videoInfo
                 //{
                 FileInfo fileInfo;
 
-                    if (File.Exists(openFileDialog.FileName))//File.Exists(fileInfo.FullName)
+                if (File.Exists(openFileDialog.FileName))//File.Exists(fileInfo.FullName)
                 {
-                        fileInfo = new FileInfo(openFileDialog.FileName);
-                        VideoInfoO(fileInfo);
+                    fileInfo = new FileInfo(openFileDialog.FileName);
+                    VideoInfoO(fileInfo);
 
-                    }
+                }
                 //}
-            }catch (Exception e)
+            } catch (Exception e)
             {
-                
+
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+
             }
         }
 
@@ -81,7 +85,7 @@ namespace videoInfo
         {
             habilitarBotones(false);
             this.Cursor = Cursors.WaitCursor;
-            
+
             try
             {
                 //inicializar objeto de la clase videos
@@ -118,15 +122,24 @@ namespace videoInfo
                 {
 
                     vid.BitRate = 0;
-                    calidadLbl(false);
+                    calidadBitRate(false);
                 }
                 else
                 {
                     vid.BitRate = (Convert.ToInt32(fileMediaStr.bitRate)) / 1000;
-                    calidadLbl(true);
+                    calidadBitRate(true);
 
                 }
-                vid.FrameRate = Convert.ToInt32(fileMediaStr.frameRate);
+                //si hay bitrate o no
+                if (fileMediaStr.frameRate != 0) { 
+                    vid.FrameRate = Convert.ToInt32(fileMediaStr.frameRate);
+                    calidadFrameRate(true);
+                }
+                else
+                {
+                    /////////////////////////////////////////////////////////////////
+                    calidadFrameRate(false);
+                }
 
                 //Especificar la escala de peso del archivo MB o KB
                 if (fileSizeInBytes > 1048576)
@@ -141,13 +154,13 @@ namespace videoInfo
                 }
                 MostrarInfVideos(vid);
             }
-            catch(Exception e){
+            catch (Exception e) {
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
 
-            
+
+
 
 
             return vid;
@@ -164,9 +177,9 @@ namespace videoInfo
             lblVDuracion.Text = duracion;
             lblVDimensiones.Text = vi.toStringDimension();
             lblVAspectRatio.Text = vi.Ratio();
-            lblVBitRate.Text = Convert.ToString(vi.BitRate)+ " kbps";
+            lblVBitRate.Text = Convert.ToString(vi.BitRate) + " kbps";
             lblVFrameRate.Text = Convert.ToString(vi.FrameRate) + " fps";
-            lblVPeso.Text = Convert.ToString(vi.Peso) + " "+ tipoPeso ;
+            lblVPeso.Text = Convert.ToString(vi.Peso) + " " + tipoPeso;
 
             //Mostrar evaluacion de video
             lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(vi.Alto)));
@@ -176,10 +189,11 @@ namespace videoInfo
             //Carga el texto de informe
             preInforme = "";
             preInforme = vi.PreInforme(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto));
-            lblCGeneral.Text = pr.CalidadPromedioDeVideo(vi.BitRate,vi.FrameRate, vi.Alto);
+            lblCGeneral.Text = pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto);
             rTxtInforme.Clear();
             rTxtInforme.Text = preInforme;
 
+            datosVisibles(true);
             habilitarBotones(true);
             this.Cursor = Cursors.Default;
         }
@@ -191,20 +205,24 @@ namespace videoInfo
             var fileInfo = new FileInfo(archivos[0]);
 
             //*.mp4;*.wmv;*.mov;*.mp4;*.flv;*.avi;*.webm;*.mkv;*.f4v;*.dav;*.usm;*.asf"
-            List<string> formatos = new List<string> {"mp4","wmv", "mov", "flv", "avi", "webm", "mkv", "f4v", "dav", "usm", "asf"};
-            if ( formatos.Contains(ultimosTres(fileInfo.Name)) ) {
+            List<string> formatos = new List<string> { "mp4", "wmv", "mov", "flv", "avi", "webm", "mkv", "f4v", "dav", "usm", "asf" };
+            if (formatos.Contains(ultimosTres(fileInfo.Name))) {
                 VideoInfoO(fileInfo);
             }
             else
             {
                 MessageBox.Show("Solo archivos de video", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            colorSystema();
 
         }
 
         private void videoInfo_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.All;
+            //cambiar color cuando arrastro
+            cambioDeColor();
+            ///////////////////////////////////////////////////////////////////////////
         }
 
         private void btnCopiar_Click(object sender, EventArgs e)
@@ -220,7 +238,7 @@ namespace videoInfo
         {
             //mostrar de nuevo el segmento de informe
             rTxtInforme.Clear();
-            rTxtInforme.Text =preInforme;
+            rTxtInforme.Text = preInforme;
         }
         public string ultimosTres(string archivo)
         {
@@ -230,7 +248,7 @@ namespace videoInfo
             if (longitud >= 3)
             {
                 ultimosTres = archivo.Substring(longitud - 3);
-               
+
             }
             return ultimosTres;
         }
@@ -241,10 +259,16 @@ namespace videoInfo
             settingsform.ShowDialog();
 
         }
-        public void calidadLbl(bool x)
+        public void calidadBitRate(bool x)
         {
             lblVBitRate.Visible = x;
             lblCBitRate.Visible = x;
+
+        }
+        public void calidadFrameRate(bool x)
+        {
+            lblVFrameRate.Visible = x;
+            lblCFrameRate.Visible = x;
 
         }
         public void habilitarBotones(bool x)
@@ -267,9 +291,100 @@ namespace videoInfo
 
         private void acercaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           var creditos = new Creditos();
-           creditos.ShowDialog();
+            var creditos = new Creditos();
+            creditos.ShowDialog();
 
+        }
+        private void datosVisibles(bool x)
+        {
+            lblBitRate.Visible =x;
+            lblBitRate.Visible = x;
+            lblDuracion.Visible = x;
+            lblNombre.Visible = x;
+            lblDivisor.Visible = x;
+            lblGeneral.Visible = x;
+            lblDimension.Visible = x;
+            lblC1.Visible = x;
+
+            //labels C
+            lblC2.Visible = x;
+            lblCAspectRatio.Visible = x;
+            //lblCBitRate.Visible = x;
+            lblCDimensiones.Visible = x;
+            lblCDireccion.Visible = x;
+            lblCDuracion.Visible = x;
+            //lblCFrameRate.Visible = x;
+            lblCGeneral.Visible = x;
+            lblCPeso.Visible = x;
+            lblCNombre.Visible = x;
+            //labels sin nombre
+            label10.Visible = x;
+            label18.Visible = x;
+            label2.Visible = x;
+            label3.Visible = x;
+            label4.Visible = x;
+            label5.Visible = x;
+            label6.Visible = x;
+            label7.Visible = x;
+            label8.Visible = x;
+            label9.Visible = x;
+            label10.Visible = x;
+            label12.Visible = x;
+            label13.Visible = x;
+            label17.Visible = x;
+            label18.Visible = x;
+            //labels V
+            lblVAspectRatio.Visible = x;
+            //lblVBitRate.Visible = x;
+            lblVDimensiones.Visible = x;
+            lblVDireccion.Visible = x;
+            lblVDuracion.Visible = x;
+            //lblVFrameRate.Visible = x;
+            lblVNombre.Visible = x;
+            lblVPeso.Visible = x;
+
+            //botones
+            btnCopiar.Enabled = x;
+            btnRegenerarTexto.Enabled = x;
+            rTxtInforme.Enabled = x;
+            //contrario
+
+            lblAbrirArrastrar.Visible = !x;
+        }
+
+        private void grpDatos_DragOver(object sender, DragEventArgs e)
+        {
+            //grpDatos.BackColor = System.Drawing.Color.Black;
+        }
+
+        private void videoInfo_DragLeave(object sender, EventArgs e)
+        {
+            colorSystema();
+        }
+
+        private void panelGeneral_DragLeave(object sender, EventArgs e)
+        {
+
+            colorSystema();
+        }
+        private void cambioDeColor()
+        {
+            grpDatos.BackColor = Color.SkyBlue;
+            panelGeneral.BackColor = Color.SkyBlue;
+            btnAbrir.BackColor = Color.SkyBlue;
+            btnConfigurar.BackColor = Color.SkyBlue;
+            btnCopiar.BackColor = Color.SkyBlue;
+            btnRegenerarTexto.BackColor = Color.SkyBlue;
+            
+        }
+        private void colorSystema()
+        {
+            grpDatos.BackColor = SystemColors.Control;
+            panelGeneral.BackColor = SystemColors.Control;
+            btnAbrir.BackColor = SystemColors.Control;
+            btnConfigurar.BackColor = SystemColors.Control;
+            btnCopiar.BackColor = SystemColors.Control;
+            btnRegenerarTexto.BackColor = SystemColors.Control;
         }
     }
 }
