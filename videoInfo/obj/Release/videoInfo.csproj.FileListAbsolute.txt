@@ -21,3 +21,29 @@ C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Release\videoInfo.csproj.Cor
 C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Release\videoInfo.csproj.CopyComplete
 C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Release\videoInfo.exe
 C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Release\videoInfo.pdb
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\x64\MediaInfo.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\x86\MediaInfo.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\MediaInfoDotNet.dll.config
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\videoInfo.exe.config
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\videoInfo.exe
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\videoInfo.pdb
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\ExtensionMethods.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\MediaInfoDotNet.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\NReco.VideoInfo.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\ExtensionMethods.pdb
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\ExtensionMethods.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\MediaInfoDotNet.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\Calidad de Video\NReco.VideoInfo.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\x64\MediaInfo.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\x86\MediaInfo.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\MediaInfoDotNet.dll.config
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\videoInfo.exe.config
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\videoInfo.exe
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\videoInfo.pdb
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\ExtensionMethods.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\MediaInfoDotNet.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\NReco.VideoInfo.dll
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\ExtensionMethods.pdb
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\ExtensionMethods.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\MediaInfoDotNet.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Calidad de Video\NReco.VideoInfo.xml
