@@ -35,6 +35,7 @@ namespace videoInfo
 
         private void videoInfo_Load(object sender, EventArgs e)
         {
+            //iniciar con el contenido invisible
             datosVisibles(false);
             calidadFrameRate(false);
             calidadBitRate(false);
@@ -61,17 +62,16 @@ namespace videoInfo
                 openFileDialog.FileName = "";
                 openFileDialog.ShowDialog();
 
-                //if (openFileDialog.FileName != null | openFileDialog.FileName != "")
-                //{
+                
                 FileInfo fileInfo;
 
-                if (File.Exists(openFileDialog.FileName))//File.Exists(fileInfo.FullName)
+                if (File.Exists(openFileDialog.FileName))
                 {
                     fileInfo = new FileInfo(openFileDialog.FileName);
                     VideoInfoO(fileInfo);
 
                 }
-                //}
+               
             }
             catch (Exception e)
             {
@@ -182,6 +182,7 @@ namespace videoInfo
             habilitarBotones(false);
             //inicializar clase de PruebaDeCalidad
             pr = new PruebaDeCalidad();
+
             //Mostrar info de video
             lblVNombre.Text = vi.Nombre;
             lblVDireccion.Text = vi.Direccion;
@@ -194,8 +195,6 @@ namespace videoInfo
             lblVPeso.Text = Convert.ToString(vi.Peso) + " " + tipoPeso;
 
             //Mostrar evaluacion de video
-
-
             lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(anchoAlto)));
             lblCBitRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadBitRate(vi.BitRate)));
             lblCFrameRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadFrameRate(vi.FrameRate)));
@@ -207,6 +206,7 @@ namespace videoInfo
             rTxtInforme.Clear();
             rTxtInforme.Text = preInforme;
 
+            //habilitar botones y cursor por defecto
             datosVisibles(true);
             habilitarBotones(true);
             this.Cursor = Cursors.Default;
@@ -362,8 +362,9 @@ namespace videoInfo
             btnCopiar.Enabled = x;
             btnRegenerarTexto.Enabled = x;
             rTxtInforme.Enabled = x;
+            
             //contrario
-
+            // mensaje abrir o arrastrar sera visible cuando el resto no
             lblAbrirArrastrar.Visible = !x;
         }
 
@@ -374,16 +375,20 @@ namespace videoInfo
 
         private void videoInfo_DragLeave(object sender, EventArgs e)
         {
+            //abandonar el arrastrado de video y colocar colores por defecto
             colorSystema();
         }
-
+        
         private void panelGeneral_DragLeave(object sender, EventArgs e)
         {
-
+            //abandonar el arrastrado de video y colocar colores por defecto
             colorSystema();
         }
+
+        
         private void cambioDeColor()
         {
+            //cambia todo aceleste para mostrar interaccion con el objeto arrastrado
             grpDatos.BackColor = Color.SkyBlue;
             panelGeneral.BackColor = Color.SkyBlue;
             btnAbrir.BackColor = Color.SkyBlue;
@@ -392,8 +397,11 @@ namespace videoInfo
             btnRegenerarTexto.BackColor = Color.SkyBlue;
 
         }
+
+        
         private void colorSystema()
         {
+            //regresa todo a color por defecto, SystemColors.Control
             grpDatos.BackColor = SystemColors.Control;
             panelGeneral.BackColor = SystemColors.Control;
             btnAbrir.BackColor = SystemColors.Control;

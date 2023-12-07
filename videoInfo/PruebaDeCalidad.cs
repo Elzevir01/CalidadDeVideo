@@ -49,7 +49,7 @@ namespace videoInfo
             //usando una clasificacion numerica de 0 a 100 determinar en texto la calidad de este
             string calidad = "";
             if (calidadDe < 25)
-                calidad = "muy mala";
+                calidad = "Muy Mala";
             if (calidadDe >= 25)
                 calidad = "Mala";
             if (calidadDe >= 50)
@@ -59,9 +59,8 @@ namespace videoInfo
             if (calidadDe >=100)
                 calidad = "Muy Buena";
 
-            //calidad = "Sin Determinar";
 
-            return calidad;// +Convert.ToString(calidadDe);
+            return calidad;
         }
         public string CalidadPromedioDeVideo(int bitrate, int framerate, int resolucion)
         {
