@@ -7,10 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "videoInfo", "videoInfo\vide
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Calidad de Video|Any CPU = Calidad de Video|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}.Calidad de Video|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}.Calidad de Video|Any CPU.Build.0 = Debug|Any CPU
 		{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}.Release|Any CPU.ActiveCfg = Release|Any CPU
