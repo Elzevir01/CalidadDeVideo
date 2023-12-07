@@ -429,7 +429,7 @@ namespace videoInfo
             btnCopiar.Text = "COPIADO!";
             btnCopiar.Image = null;
             //regresar a estado original el boton copiar
-            await Task.Delay(1000);
+            await Task.Delay(800);
             btnCopiar.BackColor = SystemColors.Control;
             btnCopiar.Text = "Copiar Texto";
             btnCopiar.TextAlign = ContentAlignment.BottomCenter;
