@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>pelicula64.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExtensionMethods, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ExtensionMethods.2.0.0\lib\net46\ExtensionMethods.dll</HintPath>
