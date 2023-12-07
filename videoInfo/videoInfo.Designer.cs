@@ -148,26 +148,26 @@
             // btnConfigurar
             // 
             this.btnConfigurar.Image = ((System.Drawing.Image)(resources.GetObject("btnConfigurar.Image")));
-            this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnConfigurar.Location = new System.Drawing.Point(504, 12);
+            this.btnConfigurar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfigurar.Location = new System.Drawing.Point(479, 6);
             this.btnConfigurar.Name = "btnConfigurar";
-            this.btnConfigurar.Size = new System.Drawing.Size(73, 54);
+            this.btnConfigurar.Size = new System.Drawing.Size(97, 37);
             this.btnConfigurar.TabIndex = 8;
             this.btnConfigurar.Text = "Configurar";
-            this.btnConfigurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnConfigurar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnConfigurar.UseVisualStyleBackColor = true;
             this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
             // 
             // btnAbrir
             // 
             this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
-            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAbrir.Location = new System.Drawing.Point(211, 12);
+            this.btnAbrir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbrir.Location = new System.Drawing.Point(230, 6);
             this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(146, 54);
+            this.btnAbrir.Size = new System.Drawing.Size(100, 37);
             this.btnAbrir.TabIndex = 0;
             this.btnAbrir.Text = "Abrir Video";
-            this.btnAbrir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
@@ -182,36 +182,39 @@
             this.panelGeneral.Controls.Add(this.btnConfigurar);
             this.panelGeneral.Location = new System.Drawing.Point(0, 27);
             this.panelGeneral.Name = "panelGeneral";
-            this.panelGeneral.Size = new System.Drawing.Size(588, 409);
+            this.panelGeneral.Size = new System.Drawing.Size(588, 396);
             this.panelGeneral.TabIndex = 12;
             this.panelGeneral.DragLeave += new System.EventHandler(this.panelGeneral_DragLeave);
+            this.panelGeneral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGeneral_Paint);
             // 
             // btnRegenerarTexto
             // 
             this.btnRegenerarTexto.Image = ((System.Drawing.Image)(resources.GetObject("btnRegenerarTexto.Image")));
-            this.btnRegenerarTexto.Location = new System.Drawing.Point(12, 335);
+            this.btnRegenerarTexto.Location = new System.Drawing.Point(12, 312);
             this.btnRegenerarTexto.Name = "btnRegenerarTexto";
             this.btnRegenerarTexto.Size = new System.Drawing.Size(76, 67);
             this.btnRegenerarTexto.TabIndex = 13;
             this.btnRegenerarTexto.Text = "Recargar";
             this.btnRegenerarTexto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRegenerarTexto.UseVisualStyleBackColor = true;
+            this.btnRegenerarTexto.Click += new System.EventHandler(this.btnRegenerarTexto_Click_1);
             // 
             // btnCopiar
             // 
             this.btnCopiar.Image = global::videoInfo.Properties.Resources.portapapeles;
-            this.btnCopiar.Location = new System.Drawing.Point(502, 337);
+            this.btnCopiar.Location = new System.Drawing.Point(502, 314);
             this.btnCopiar.Name = "btnCopiar";
             this.btnCopiar.Size = new System.Drawing.Size(75, 65);
             this.btnCopiar.TabIndex = 12;
             this.btnCopiar.Text = "Copiar Texto";
             this.btnCopiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCopiar.UseVisualStyleBackColor = true;
+            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click_1);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(101, 319);
+            this.label10.Location = new System.Drawing.Point(101, 296);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 13);
             this.label10.TabIndex = 11;
@@ -219,7 +222,7 @@
             // 
             // rTxtInforme
             // 
-            this.rTxtInforme.Location = new System.Drawing.Point(94, 335);
+            this.rTxtInforme.Location = new System.Drawing.Point(94, 312);
             this.rTxtInforme.Name = "rTxtInforme";
             this.rTxtInforme.Size = new System.Drawing.Size(402, 67);
             this.rTxtInforme.TabIndex = 10;
@@ -266,7 +269,7 @@
             this.grpDatos.Controls.Add(this.lblDuracion);
             this.grpDatos.Controls.Add(this.label2);
             this.grpDatos.Controls.Add(this.lblNombre);
-            this.grpDatos.Location = new System.Drawing.Point(12, 72);
+            this.grpDatos.Location = new System.Drawing.Point(11, 45);
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Size = new System.Drawing.Size(565, 244);
             this.grpDatos.TabIndex = 9;
@@ -620,7 +623,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 436);
+            this.ClientSize = new System.Drawing.Size(588, 424);
             this.Controls.Add(this.panelGeneral);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

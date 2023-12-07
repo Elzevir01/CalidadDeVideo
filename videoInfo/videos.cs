@@ -105,26 +105,31 @@ namespace videoInfo
             return calidad;
         }
 
-        public string resolucionDimension()
+        public string resolucionDimension(int anchoAlto)
         {
             return ancho + " x " + alto+" "+Calidad169();
         }
         
-        public string toStringDimension()
+        public string toStringDimension(int anchoAlto)
         {
             string dime = "";
 
-            dime = Convert.ToString(ancho) + "x" + Convert.ToString(alto) + "px " + Calidad169();
+            dime = Convert.ToString(ancho) + "px (Ancho) X " + Convert.ToString(alto) + "px (Alto) " + Calidad169();
 
             return dime;
         }
-        public string PreInforme(string CalidadPromedio)
+        public string PreInforme(string CalidadPromedio, int anchoAlto)
         {
             string informe = "";
             string inicio = "Que en cuanto a la calidad del material filmico, nos encontramos con un video";
-            string tamanioText = "de tamaño "+ toStringDimension();
-            string framerateText = ", con un promedio de "+frameRate+" fotogramas por segundo(FPS)";
+            string tamanioText = " de tamaño "+ toStringDimension(anchoAlto);
+            string framerateText= "";// = ", con un promedio de "+frameRate+" fotogramas por segundo(FPS)";
             string bitrateText = "";
+
+            if (frameRate > 1)
+                framerateText =  ", con un promedio de " + frameRate + " fotogramas por segundo(FPS)";
+            else
+                framerateText = "";
 
             if (bitRate > 1)
                 bitrateText = ", un flujo de datos de aproximadamente " + bitRate + " kbps";

@@ -8,6 +8,8 @@ using ExtensionMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading.Tasks;
+using videoInfo.Properties;
 
 namespace videoInfo
 {
@@ -17,7 +19,7 @@ namespace videoInfo
         FFProbe ffProbe;
         string[] archivos;
         string tipoPeso;
-
+        int anchoAlto;
         string preInforme;
 
         PruebaDeCalidad pr;
@@ -70,7 +72,8 @@ namespace videoInfo
 
                 }
                 //}
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
 
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -83,6 +86,7 @@ namespace videoInfo
 
         private videos VideoInfoO(FileInfo fil)
         {
+            //Deshabilitar todos los botones
             habilitarBotones(false);
             this.Cursor = Cursors.WaitCursor;
 
@@ -131,7 +135,8 @@ namespace videoInfo
 
                 }
                 //si hay bitrate o no
-                if (fileMediaStr.frameRate != 0) { 
+                if (fileMediaStr.frameRate != 0)
+                {
                     vid.FrameRate = Convert.ToInt32(fileMediaStr.frameRate);
                     calidadFrameRate(true);
                 }
@@ -154,7 +159,8 @@ namespace videoInfo
                 }
                 MostrarInfVideos(vid);
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -167,6 +173,12 @@ namespace videoInfo
         }
         private void MostrarInfVideos(videos vi)
         {
+            //si es horizontal o vertical se utilizara 
+            if (vi.Alto < vi.Ancho)
+                anchoAlto = vi.Alto;
+            else
+                anchoAlto = vi.Ancho;
+
             habilitarBotones(false);
             //inicializar clase de PruebaDeCalidad
             pr = new PruebaDeCalidad();
@@ -175,20 +187,22 @@ namespace videoInfo
             lblVDireccion.Text = vi.Direccion;
             var duracion = vi.Duracion.ToString(@"hh\:mm\:ss");
             lblVDuracion.Text = duracion;
-            lblVDimensiones.Text = vi.toStringDimension();
+            lblVDimensiones.Text = vi.toStringDimension(anchoAlto);
             lblVAspectRatio.Text = vi.Ratio();
             lblVBitRate.Text = Convert.ToString(vi.BitRate) + " kbps";
             lblVFrameRate.Text = Convert.ToString(vi.FrameRate) + " fps";
             lblVPeso.Text = Convert.ToString(vi.Peso) + " " + tipoPeso;
 
             //Mostrar evaluacion de video
-            lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(vi.Alto)));
+
+
+            lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(anchoAlto)));
             lblCBitRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadBitRate(vi.BitRate)));
             lblCFrameRate.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadFrameRate(vi.FrameRate)));
 
             //Carga el texto de informe
             preInforme = "";
-            preInforme = vi.PreInforme(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto));
+            preInforme = vi.PreInforme(pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto), anchoAlto);
             lblCGeneral.Text = pr.CalidadPromedioDeVideo(vi.BitRate, vi.FrameRate, vi.Alto);
             rTxtInforme.Clear();
             rTxtInforme.Text = preInforme;
@@ -206,7 +220,8 @@ namespace videoInfo
 
             //*.mp4;*.wmv;*.mov;*.mp4;*.flv;*.avi;*.webm;*.mkv;*.f4v;*.dav;*.usm;*.asf"
             List<string> formatos = new List<string> { "mp4", "wmv", "mov", "flv", "avi", "webm", "mkv", "f4v", "dav", "usm", "asf" };
-            if (formatos.Contains(ultimosTres(fileInfo.Name))) {
+            if (formatos.Contains(ultimosTres(fileInfo.Name)))
+            {
                 VideoInfoO(fileInfo);
             }
             else
@@ -297,7 +312,7 @@ namespace videoInfo
         }
         private void datosVisibles(bool x)
         {
-            lblBitRate.Visible =x;
+            lblBitRate.Visible = x;
             lblBitRate.Visible = x;
             lblDuracion.Visible = x;
             lblNombre.Visible = x;
@@ -375,7 +390,7 @@ namespace videoInfo
             btnConfigurar.BackColor = Color.SkyBlue;
             btnCopiar.BackColor = Color.SkyBlue;
             btnRegenerarTexto.BackColor = Color.SkyBlue;
-            
+
         }
         private void colorSystema()
         {
@@ -385,6 +400,40 @@ namespace videoInfo
             btnConfigurar.BackColor = SystemColors.Control;
             btnCopiar.BackColor = SystemColors.Control;
             btnRegenerarTexto.BackColor = SystemColors.Control;
+        }
+
+        private void panelGeneral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnRegenerarTexto_Click_1(object sender, EventArgs e)
+        {
+            //mostrar de nuevo el segmento de informe
+            rTxtInforme.Clear();
+            rTxtInforme.Text = preInforme;
+        }
+
+        private async void btnCopiar_Click_1(object sender, EventArgs e)
+        {
+
+            //copiar texto a porta papeles
+            if (rTxtInforme.Text != "")
+                Clipboard.SetDataObject(preInforme);
+            else
+                rTxtInforme.Text = "";
+
+            //cambiar de color copiar
+            btnCopiar.BackColor = Color.LightGreen;
+            btnCopiar.TextAlign = ContentAlignment.MiddleCenter;
+            btnCopiar.Text = "COPIADO!";
+            btnCopiar.Image = null;
+            //regresar a estado original el boton copiar
+            await Task.Delay(1000);
+            btnCopiar.BackColor = SystemColors.Control;
+            btnCopiar.Text = "Copiar Texto";
+            btnCopiar.TextAlign = ContentAlignment.BottomCenter;
+            btnCopiar.Image = Resources.portapapeles;
         }
     }
 }
