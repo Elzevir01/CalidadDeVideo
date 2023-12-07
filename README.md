@@ -1,3 +1,2 @@
-## CalidadDeVideo
+## ![imagen](/videoInfo/Assets/pelicula.png) CalidadDeVideo
 
-![imagen](/videoInfo/Assets/pelicula.png)
