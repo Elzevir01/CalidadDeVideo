@@ -21,3 +21,8 @@ C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\ExtensionMethods.pdb
 C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\ExtensionMethods.xml
 C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.settingsForm.resources
 C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.Creditos.resources
+C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.TrustInfo.xml
+C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.exe.manifest
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\videoInfo.exe.manifest
+C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\videoInfo.application
+C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.application
