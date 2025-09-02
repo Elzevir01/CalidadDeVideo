@@ -151,14 +151,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="videoInfo.exe" size="115712">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="videoInfo.exe" size="116224">
       <assemblyIdentity name="videoInfo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b+WwWJlL6CJok+HqKGH9fKiQPwSZbBlE9IiVyk1gXN8=</dsig:DigestValue>
+        <dsig:DigestValue>X3udFWv+vbiODuJUy7Age24Rpjd2z9pOUu1SMwAJXaQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

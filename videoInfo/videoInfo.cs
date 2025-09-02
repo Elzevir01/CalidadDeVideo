@@ -443,6 +443,20 @@ namespace videoInfo
             //graficos
 
             gaugePromedio.Visible = x;
+            lbl100.Visible = x;
+            lblCPixels.Visible = x;
+            lblCFPS.Visible = x;
+            lblCBitsGraph.Visible = x;
+
+            //grpEvaluacionCalidad.Visible = x;
+            //grpDatos.Visible = x;
+            //grpCapturas.Visible = x;
+            grpDimensiones.Visible = x;
+            grpFPS.Visible = x;
+            grpBits.Visible = x;
+
+            
+
 
             //screencap
             lblTimeStamp0.Visible = x;

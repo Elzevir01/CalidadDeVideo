@@ -37,31 +37,31 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelGeneral = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.grpEvaluacionCalidad = new System.Windows.Forms.GroupBox();
+            this.grpDimensiones = new System.Windows.Forms.GroupBox();
             this.lblC1 = new System.Windows.Forms.Label();
             this.lblCDimensiones = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblCPixels = new System.Windows.Forms.Label();
             this.pvGaugeDimension = new OxyPlot.WindowsForms.PlotView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grpBits = new System.Windows.Forms.GroupBox();
             this.pvGaugeBits = new OxyPlot.WindowsForms.PlotView();
-            this.lblBitsGraph = new System.Windows.Forms.Label();
+            this.lblCBitsGraph = new System.Windows.Forms.Label();
             this.lblC2 = new System.Windows.Forms.Label();
             this.lblCBitRate = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.grpFPS = new System.Windows.Forms.GroupBox();
             this.pvGaugeFps = new OxyPlot.WindowsForms.PlotView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCFPS = new System.Windows.Forms.Label();
             this.lblCFrameRate = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl100 = new System.Windows.Forms.Label();
             this.gaugePromedio = new LiveCharts.WinForms.SolidGauge();
             this.lblCGeneral = new System.Windows.Forms.Label();
             this.lblGeneral = new System.Windows.Forms.Label();
             this.btnCopiar = new System.Windows.Forms.Button();
             this.btnRegenerarTexto = new System.Windows.Forms.Button();
             this.btnAbrir = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpCapturas = new System.Windows.Forms.GroupBox();
             this.lblTimeStamp3 = new System.Windows.Forms.Label();
             this.pBoxThumbNail3 = new System.Windows.Forms.PictureBox();
             this.lblTimeStamp2 = new System.Windows.Forms.Label();
@@ -103,12 +103,12 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelGeneral.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.grpEvaluacionCalidad.SuspendLayout();
+            this.grpDimensiones.SuspendLayout();
+            this.grpBits.SuspendLayout();
+            this.grpFPS.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpCapturas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxThumbNail3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxThumbNail2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxThumbNail1)).BeginInit();
@@ -176,12 +176,13 @@
             // 
             // panelGeneral
             // 
-            this.panelGeneral.Controls.Add(this.groupBox3);
+            this.panelGeneral.Controls.Add(this.lblAbrirArrastrar);
+            this.panelGeneral.Controls.Add(this.grpEvaluacionCalidad);
             this.panelGeneral.Controls.Add(this.groupBox2);
             this.panelGeneral.Controls.Add(this.btnCopiar);
             this.panelGeneral.Controls.Add(this.btnRegenerarTexto);
             this.panelGeneral.Controls.Add(this.btnAbrir);
-            this.panelGeneral.Controls.Add(this.groupBox1);
+            this.panelGeneral.Controls.Add(this.grpCapturas);
             this.panelGeneral.Controls.Add(this.label10);
             this.panelGeneral.Controls.Add(this.btnConfigurar);
             this.panelGeneral.Controls.Add(this.rTxtInforme);
@@ -194,30 +195,30 @@
             this.panelGeneral.DragLeave += new System.EventHandler(this.panelGeneral_DragLeave);
             this.panelGeneral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGeneral_Paint);
             // 
-            // groupBox3
+            // grpEvaluacionCalidad
             // 
-            this.groupBox3.Controls.Add(this.groupBox6);
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.groupBox5);
-            this.groupBox3.Location = new System.Drawing.Point(451, 54);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(517, 329);
-            this.groupBox3.TabIndex = 57;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Evaluacion de calidad";
+            this.grpEvaluacionCalidad.Controls.Add(this.grpDimensiones);
+            this.grpEvaluacionCalidad.Controls.Add(this.grpBits);
+            this.grpEvaluacionCalidad.Controls.Add(this.grpFPS);
+            this.grpEvaluacionCalidad.Location = new System.Drawing.Point(451, 54);
+            this.grpEvaluacionCalidad.Name = "grpEvaluacionCalidad";
+            this.grpEvaluacionCalidad.Size = new System.Drawing.Size(517, 329);
+            this.grpEvaluacionCalidad.TabIndex = 57;
+            this.grpEvaluacionCalidad.TabStop = false;
+            this.grpEvaluacionCalidad.Text = "Evaluacion de calidad";
             // 
-            // groupBox6
+            // grpDimensiones
             // 
-            this.groupBox6.Controls.Add(this.lblC1);
-            this.groupBox6.Controls.Add(this.lblCDimensiones);
-            this.groupBox6.Controls.Add(this.label11);
-            this.groupBox6.Controls.Add(this.pvGaugeDimension);
-            this.groupBox6.Location = new System.Drawing.Point(6, 222);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(495, 90);
-            this.groupBox6.TabIndex = 57;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Calidad de Dimensiones";
+            this.grpDimensiones.Controls.Add(this.lblC1);
+            this.grpDimensiones.Controls.Add(this.lblCDimensiones);
+            this.grpDimensiones.Controls.Add(this.lblCPixels);
+            this.grpDimensiones.Controls.Add(this.pvGaugeDimension);
+            this.grpDimensiones.Location = new System.Drawing.Point(6, 222);
+            this.grpDimensiones.Name = "grpDimensiones";
+            this.grpDimensiones.Size = new System.Drawing.Size(495, 90);
+            this.grpDimensiones.TabIndex = 57;
+            this.grpDimensiones.TabStop = false;
+            this.grpDimensiones.Text = "Calidad de Dimensiones";
             // 
             // lblC1
             // 
@@ -237,14 +238,14 @@
             this.lblCDimensiones.TabIndex = 28;
             this.lblCDimensiones.Text = "-";
             // 
-            // label11
+            // lblCPixels
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(457, 58);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Pixels";
+            this.lblCPixels.AutoSize = true;
+            this.lblCPixels.Location = new System.Drawing.Point(457, 58);
+            this.lblCPixels.Name = "lblCPixels";
+            this.lblCPixels.Size = new System.Drawing.Size(34, 13);
+            this.lblCPixels.TabIndex = 1;
+            this.lblCPixels.Text = "Pixels";
             // 
             // pvGaugeDimension
             // 
@@ -259,18 +260,18 @@
             this.pvGaugeDimension.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.pvGaugeDimension.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // groupBox4
+            // grpBits
             // 
-            this.groupBox4.Controls.Add(this.pvGaugeBits);
-            this.groupBox4.Controls.Add(this.lblBitsGraph);
-            this.groupBox4.Controls.Add(this.lblC2);
-            this.groupBox4.Controls.Add(this.lblCBitRate);
-            this.groupBox4.Location = new System.Drawing.Point(6, 30);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(495, 90);
-            this.groupBox4.TabIndex = 58;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Calidad de Taza de Bits";
+            this.grpBits.Controls.Add(this.pvGaugeBits);
+            this.grpBits.Controls.Add(this.lblCBitsGraph);
+            this.grpBits.Controls.Add(this.lblC2);
+            this.grpBits.Controls.Add(this.lblCBitRate);
+            this.grpBits.Location = new System.Drawing.Point(6, 30);
+            this.grpBits.Name = "grpBits";
+            this.grpBits.Size = new System.Drawing.Size(495, 90);
+            this.grpBits.TabIndex = 58;
+            this.grpBits.TabStop = false;
+            this.grpBits.Text = "Calidad de Taza de Bits";
             // 
             // pvGaugeBits
             // 
@@ -285,14 +286,14 @@
             this.pvGaugeBits.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.pvGaugeBits.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // lblBitsGraph
+            // lblCBitsGraph
             // 
-            this.lblBitsGraph.AutoSize = true;
-            this.lblBitsGraph.Location = new System.Drawing.Point(456, 56);
-            this.lblBitsGraph.Name = "lblBitsGraph";
-            this.lblBitsGraph.Size = new System.Drawing.Size(35, 13);
-            this.lblBitsGraph.TabIndex = 1;
-            this.lblBitsGraph.Text = "kbp/s";
+            this.lblCBitsGraph.AutoSize = true;
+            this.lblCBitsGraph.Location = new System.Drawing.Point(456, 56);
+            this.lblCBitsGraph.Name = "lblCBitsGraph";
+            this.lblCBitsGraph.Size = new System.Drawing.Size(35, 13);
+            this.lblCBitsGraph.TabIndex = 1;
+            this.lblCBitsGraph.Text = "kbp/s";
             // 
             // lblC2
             // 
@@ -312,18 +313,18 @@
             this.lblCBitRate.TabIndex = 43;
             this.lblCBitRate.Text = "-";
             // 
-            // groupBox5
+            // grpFPS
             // 
-            this.groupBox5.Controls.Add(this.pvGaugeFps);
-            this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.lblCFrameRate);
-            this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Location = new System.Drawing.Point(6, 126);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(495, 90);
-            this.groupBox5.TabIndex = 59;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Calidad de Fotos por Segundo";
+            this.grpFPS.Controls.Add(this.pvGaugeFps);
+            this.grpFPS.Controls.Add(this.lblCFPS);
+            this.grpFPS.Controls.Add(this.lblCFrameRate);
+            this.grpFPS.Controls.Add(this.label12);
+            this.grpFPS.Location = new System.Drawing.Point(6, 126);
+            this.grpFPS.Name = "grpFPS";
+            this.grpFPS.Size = new System.Drawing.Size(495, 90);
+            this.grpFPS.TabIndex = 59;
+            this.grpFPS.TabStop = false;
+            this.grpFPS.Text = "Calidad de Fotos por Segundo";
             // 
             // pvGaugeFps
             // 
@@ -337,14 +338,14 @@
             this.pvGaugeFps.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.pvGaugeFps.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // label1
+            // lblCFPS
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(456, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "FPS";
+            this.lblCFPS.AutoSize = true;
+            this.lblCFPS.Location = new System.Drawing.Point(456, 59);
+            this.lblCFPS.Name = "lblCFPS";
+            this.lblCFPS.Size = new System.Drawing.Size(27, 13);
+            this.lblCFPS.TabIndex = 1;
+            this.lblCFPS.Text = "FPS";
             // 
             // lblCFrameRate
             // 
@@ -366,7 +367,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lbl100);
             this.groupBox2.Controls.Add(this.gaugePromedio);
             this.groupBox2.Controls.Add(this.lblCGeneral);
             this.groupBox2.Controls.Add(this.lblGeneral);
@@ -377,14 +378,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Evaluacion Final";
             // 
-            // label2
+            // lbl100
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "/100";
+            this.lbl100.AutoSize = true;
+            this.lbl100.Location = new System.Drawing.Point(96, 138);
+            this.lbl100.Name = "lbl100";
+            this.lbl100.Size = new System.Drawing.Size(30, 13);
+            this.lbl100.TabIndex = 1;
+            this.lbl100.Text = "/100";
             // 
             // gaugePromedio
             // 
@@ -448,22 +449,22 @@
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
-            // groupBox1
+            // grpCapturas
             // 
-            this.groupBox1.Controls.Add(this.lblTimeStamp3);
-            this.groupBox1.Controls.Add(this.pBoxThumbNail3);
-            this.groupBox1.Controls.Add(this.lblTimeStamp2);
-            this.groupBox1.Controls.Add(this.pBoxThumbNail2);
-            this.groupBox1.Controls.Add(this.lblTimeStamp1);
-            this.groupBox1.Controls.Add(this.pBoxThumbNail1);
-            this.groupBox1.Controls.Add(this.lblTimeStamp0);
-            this.groupBox1.Controls.Add(this.pBoxThumbNail0);
-            this.groupBox1.Location = new System.Drawing.Point(8, 200);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(417, 240);
-            this.groupBox1.TabIndex = 51;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Capturas";
+            this.grpCapturas.Controls.Add(this.lblTimeStamp3);
+            this.grpCapturas.Controls.Add(this.pBoxThumbNail3);
+            this.grpCapturas.Controls.Add(this.lblTimeStamp2);
+            this.grpCapturas.Controls.Add(this.pBoxThumbNail2);
+            this.grpCapturas.Controls.Add(this.lblTimeStamp1);
+            this.grpCapturas.Controls.Add(this.pBoxThumbNail1);
+            this.grpCapturas.Controls.Add(this.lblTimeStamp0);
+            this.grpCapturas.Controls.Add(this.pBoxThumbNail0);
+            this.grpCapturas.Location = new System.Drawing.Point(8, 200);
+            this.grpCapturas.Name = "grpCapturas";
+            this.grpCapturas.Size = new System.Drawing.Size(417, 240);
+            this.grpCapturas.TabIndex = 51;
+            this.grpCapturas.TabStop = false;
+            this.grpCapturas.Text = "Capturas";
             // 
             // lblTimeStamp3
             // 
@@ -583,7 +584,6 @@
             this.grpDatos.BackColor = System.Drawing.SystemColors.MenuBar;
             this.grpDatos.Controls.Add(this.lblVBitRate);
             this.grpDatos.Controls.Add(this.label17);
-            this.grpDatos.Controls.Add(this.lblAbrirArrastrar);
             this.grpDatos.Controls.Add(this.label18);
             this.grpDatos.Controls.Add(this.lblVAspectRatio);
             this.grpDatos.Controls.Add(this.lblCAspectRatio);
@@ -637,7 +637,7 @@
             // 
             this.lblAbrirArrastrar.AutoSize = true;
             this.lblAbrirArrastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbrirArrastrar.Location = new System.Drawing.Point(1, 2);
+            this.lblAbrirArrastrar.Location = new System.Drawing.Point(230, 216);
             this.lblAbrirArrastrar.Name = "lblAbrirArrastrar";
             this.lblAbrirArrastrar.Size = new System.Drawing.Size(496, 31);
             this.lblAbrirArrastrar.TabIndex = 9;
@@ -880,16 +880,16 @@
             this.menuStrip1.PerformLayout();
             this.panelGeneral.ResumeLayout(false);
             this.panelGeneral.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.grpEvaluacionCalidad.ResumeLayout(false);
+            this.grpDimensiones.ResumeLayout(false);
+            this.grpDimensiones.PerformLayout();
+            this.grpBits.ResumeLayout(false);
+            this.grpBits.PerformLayout();
+            this.grpFPS.ResumeLayout(false);
+            this.grpFPS.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.grpCapturas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pBoxThumbNail3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxThumbNail2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxThumbNail1)).EndInit();
@@ -953,10 +953,10 @@
         private System.Windows.Forms.Label lblDimension;
         private System.Windows.Forms.Label lblDuracion;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblBitsGraph;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblCBitsGraph;
+        private System.Windows.Forms.Label lblCFPS;
+        private System.Windows.Forms.Label lblCPixels;
+        private System.Windows.Forms.GroupBox grpCapturas;
         private System.Windows.Forms.PictureBox pBoxThumbNail0;
         private System.Windows.Forms.Label lblCGeneral;
         private System.Windows.Forms.Label lblTimeStamp0;
@@ -967,15 +967,15 @@
         private System.Windows.Forms.Label lblTimeStamp1;
         private System.Windows.Forms.PictureBox pBoxThumbNail1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl100;
         private LiveCharts.WinForms.SolidGauge gaugePromedio;
         private OxyPlot.WindowsForms.PlotView pvGaugeBits;
         private OxyPlot.WindowsForms.PlotView pvGaugeFps;
         private OxyPlot.WindowsForms.PlotView pvGaugeDimension;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox grpEvaluacionCalidad;
+        private System.Windows.Forms.GroupBox grpBits;
+        private System.Windows.Forms.GroupBox grpFPS;
+        private System.Windows.Forms.GroupBox grpDimensiones;
     }
 }
 
