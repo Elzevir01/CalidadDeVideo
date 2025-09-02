@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows.Forms;
 using MediaInfoDotNet;
 using NReco.VideoInfo;
+using NReco.VideoConverter;
 
 using ExtensionMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
@@ -10,11 +11,18 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Threading.Tasks;
 using videoInfo.Properties;
+using LiveCharts.Wpf;
+
+//using System.Windows;
+//using MessageBox = System.Windows.Forms.MessageBox;
+//using SystemColors = System.Drawing.SystemColors;
+//using Clipboard = System.Windows.Forms.Clipboard;
 
 namespace videoInfo
 {
     public partial class videoInfo : Form
     {
+        OxPlotGaugeConf2 opg2;
         videos vid;
         FFProbe ffProbe;
         string[] archivos;
@@ -22,9 +30,12 @@ namespace videoInfo
         int anchoAlto;
         string preInforme;
 
+        Image[] frameVideo;
+        TimeSpan[] frameTime;
+
+        private double[] TimeSpanImage = { 0.25, 0.50, 0.75, 0.95 };
+
         PruebaDeCalidad pr;
-
-
 
 
         public videoInfo()
@@ -164,6 +175,15 @@ namespace videoInfo
                 MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // thumbnail
+
+            //ingresar el thumbnail
+
+            //TimeSpan[] timespan = vid.timeSpanArray();
+            //TimeSpan tss = timespan[0];
+            //= TimeSpan.FromSeconds(segundos).ToString(@"hh\:mm\:ss\:ffff");
+            //vid.Thumbnail = thumbnail(fil, TimeSpanImage[1]);
+           
 
 
 
@@ -185,7 +205,9 @@ namespace videoInfo
 
             //Mostrar info de video
             lblVNombre.Text = vi.Nombre;
-            lblVDireccion.Text = vi.Direccion;
+            // esto se movio a el titulo de la ventana del programa
+            //lblVDireccion.Text = vi.Direccion;
+            this.Text = "Calidad de Video - "+vi.Direccion;
             var duracion = vi.Duracion.ToString(@"hh\:mm\:ss");
             lblVDuracion.Text = duracion;
             lblVDimensiones.Text = vi.toStringDimension(anchoAlto);
@@ -193,6 +215,10 @@ namespace videoInfo
             lblVBitRate.Text = Convert.ToString(vi.BitRate) + " kbps";
             lblVFrameRate.Text = Convert.ToString(vi.FrameRate) + " fps";
             lblVPeso.Text = Convert.ToString(vi.Peso) + " " + tipoPeso;
+
+            //Carga Thumbnail
+            //pBoxThumbNail.Image = vi.Thumbnail;
+            pBoxThumbNail0.SizeMode = PictureBoxSizeMode.Zoom;
 
             //Mostrar evaluacion de video
             lblCDimensiones.Text = Convert.ToString(pr.CalidadIndividual(pr.CalidadResolucion(anchoAlto)));
@@ -206,10 +232,64 @@ namespace videoInfo
             rTxtInforme.Clear();
             rTxtInforme.Text = preInforme;
 
+           
+
             //habilitar botones y cursor por defecto
             datosVisibles(true);
             habilitarBotones(true);
             this.Cursor = Cursors.Default;
+
+            //Mostrar los datos en graficos
+            //
+            opg2 = new OxPlotGaugeConf2();
+            //bits = 0 FPS=1 Resolucion=2
+            pvGaugeBits = opg2.GaugeConf(pvGaugeBits, vi.BitRate, 0, mayorConf( Convert.ToInt32(pr.ParametroBitRate()), vi.BitRate ),0 );
+            pvGaugeFps = opg2.GaugeConf(pvGaugeFps, vi.FrameRate, 0 , mayorConf( Convert.ToInt32(pr.ParametroFrameRate()), vi.FrameRate ) ,1 );
+            pvGaugeDimension = opg2.GaugeConf(pvGaugeDimension, vi.Alto, 0, mayorConf( Convert.ToInt32(pr.ParametroResolucion()), vi.Alto ),2 );
+            //
+            //gaugeBits.Value = vi.BitRate;
+            //gaugeBits.From = 1000;
+            //gaugeBits.To = Convert.ToInt32(pr.ParametroBitRate());
+            //gaugeBits.FromColor = System.Windows.Media.Color.FromRgb(255, 0, 0);
+            //gaugeBits.ToColor = System.Windows.Media.Color.FromRgb(0, 0,255);
+
+            //gaugeFps.Value = vi.FrameRate;
+            //gaugeFps.From = 1;
+            //gaugeFps.To = Convert.ToInt32(pr.ParametroFrameRate());
+            //gaugeFps.FromColor = System.Windows.Media.Color.FromRgb(255, 0, 0);
+            //gaugeFps.ToColor = System.Windows.Media.Color.FromRgb(0, 0, 255);
+
+            //gaugeDimension.Value = vi.Alto;
+            //gaugeDimension.From = 144;
+            //gaugeDimension.To = Convert.ToInt32(pr.ParametroResolucion());
+            //gaugeDimension.FromColor = System.Windows.Media.Color.FromRgb(255, 0, 0);
+            //gaugeDimension.ToColor = System.Windows.Media.Color.FromRgb(0, 0, 255);
+
+            gaugePromedio.From = 0;
+            gaugePromedio.To = 100;
+            gaugePromedio.Value = pr.CalidadPromedioDouble(vi.BitRate, vi.FrameRate, vi.Alto);
+            gaugePromedio.FromColor = System.Windows.Media.Color.FromRgb(255, 0, 0);
+            gaugePromedio.ToColor = System.Windows.Media.Color.FromRgb(0, 0, 255);
+            //mostrar thumbnail y timespan
+
+
+            //timespan 0
+            frameTime = new TimeSpan[4];
+            frameTime = timeSpanArray(vi.Duracion);
+            lblTimeStamp0.Text = frameTime[0].ToString(@"hh\:mm\:ss");//(@"hh\:mm\:ss\:ffff"
+            lblTimeStamp1.Text = frameTime[1].ToString(@"hh\:mm\:ss");
+            lblTimeStamp2.Text = frameTime[2].ToString(@"hh\:mm\:ss");
+            lblTimeStamp3.Text = frameTime[3].ToString(@"hh\:mm\:ss");
+            //lblTimeStamp4.Text = frameTime[4].ToString(@"hh\:mm\:ss");
+
+
+            frameVideo = new Image[4];
+            frameVideo = Thumbnail(vi.Direccion, frameTime);
+            pBoxThumbNail0.Image = frameVideo[0];
+            pBoxThumbNail1.Image = frameVideo[1];
+            pBoxThumbNail2.Image = frameVideo[2];
+            pBoxThumbNail3.Image = frameVideo[3];
+            //pBoxThumbNail4.Image = frameVideo[4];
         }
 
         private void videoInfo_DragDrop(object sender, DragEventArgs e)
@@ -219,7 +299,7 @@ namespace videoInfo
             var fileInfo = new FileInfo(archivos[0]);
 
             //*.mp4;*.wmv;*.mov;*.mp4;*.flv;*.avi;*.webm;*.mkv;*.f4v;*.dav;*.usm;*.asf"
-            List<string> formatos = new List<string> { "mp4", "wmv", "mov", "flv", "avi", "webm", "mkv", "f4v", "dav", "usm", "asf" };
+            List<string> formatos = new List<string> { "mp4", "wmv", "WMV", "mov", "flv", "avi", "webm", "mkv", "f4v", "dav", "usm", "asf" };
             if (formatos.Contains(ultimosTres(fileInfo.Name)))
             {
                 VideoInfoO(fileInfo);
@@ -335,8 +415,6 @@ namespace videoInfo
             //labels sin nombre
             label10.Visible = x;
             label18.Visible = x;
-            label2.Visible = x;
-            label3.Visible = x;
             label4.Visible = x;
             label5.Visible = x;
             label6.Visible = x;
@@ -351,8 +429,7 @@ namespace videoInfo
             //labels V
             lblVAspectRatio.Visible = x;
             //lblVBitRate.Visible = x;
-            lblVDimensiones.Visible = x;
-            lblVDireccion.Visible = x;
+            lblVDimensiones.Visible = x;           
             lblVDuracion.Visible = x;
             //lblVFrameRate.Visible = x;
             lblVNombre.Visible = x;
@@ -362,7 +439,19 @@ namespace videoInfo
             btnCopiar.Enabled = x;
             btnRegenerarTexto.Enabled = x;
             rTxtInforme.Enabled = x;
+
+            //graficos
+
+            gaugePromedio.Visible = x;
+
+            //screencap
+            lblTimeStamp0.Visible = x;
+            lblTimeStamp1.Visible = x;
+            lblTimeStamp2.Visible = x;
+            lblTimeStamp3.Visible = x;
+
             
+
             //contrario
             // mensaje abrir o arrastrar sera visible cuando el resto no
             lblAbrirArrastrar.Visible = !x;
@@ -395,6 +484,9 @@ namespace videoInfo
             btnConfigurar.BackColor = Color.SkyBlue;
             btnCopiar.BackColor = Color.SkyBlue;
             btnRegenerarTexto.BackColor = Color.SkyBlue;
+            pvGaugeBits.BackColor = Color.SkyBlue;
+            pvGaugeFps.BackColor = Color.SkyBlue;
+            pvGaugeDimension.BackColor = Color.SkyBlue;
 
         }
 
@@ -408,6 +500,9 @@ namespace videoInfo
             btnConfigurar.BackColor = SystemColors.Control;
             btnCopiar.BackColor = SystemColors.Control;
             btnRegenerarTexto.BackColor = SystemColors.Control;
+            pvGaugeBits.BackColor = SystemColors.Control;
+            pvGaugeFps.BackColor = SystemColors.Control;
+            pvGaugeDimension.BackColor = SystemColors.Control;
         }
 
         private void panelGeneral_Paint(object sender, PaintEventArgs e)
@@ -443,5 +538,58 @@ namespace videoInfo
             btnCopiar.TextAlign = ContentAlignment.BottomCenter;
             btnCopiar.Image = Resources.portapapeles;
         }
+
+        private void lblAbrirArrastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Crear el thumbnail con NRECO
+        private Image[] Thumbnail(string direccion, TimeSpan[] tiempo)//FileInfo fil, TimeSpan[] tiempo
+        {
+
+            //variable FFMpegConverter
+            var ffMpeg = new FFMpegConverter();
+
+            Image[] fv = new Image[4];
+
+            for (int i = 0; i < 4; i++)
+            {
+                // Guardar la captura en memoria (stream)
+                using (var ms = new MemoryStream())
+                {
+                    // Extraer en formato PNG ( el numero son los segundos que obtiene la caputura)
+                    ffMpeg.GetVideoThumbnail(direccion, ms, (float)tiempo[i].TotalSeconds);
+
+                    // Regresar al inicio del stream
+                    ms.Position = 0;
+
+
+                    fv[i] = Image.FromStream(ms);
+
+                }
+                frameVideo = fv;
+               
+
+            }
+            return frameVideo;
+        }
+        // obtiene 5 timespan de diferentes porcentajes->requiere la duracion del video
+        public TimeSpan[] timeSpanArray(TimeSpan duracion)
+        {
+            TimeSpan[] tsa = new TimeSpan[4];
+            for (int i = 0; i < 4; i++)
+            {
+                tsa[i] = TimeSpan.FromTicks((long)(duracion.Ticks * TimeSpanImage[i] )); //*timespan img
+            }
+
+            return tsa;
+        }
+        public int mayorConf(int conf, int maximo )
+        {
+            if (maximo > conf) return maximo;
+            else return conf;
+        }
+
     }
 }

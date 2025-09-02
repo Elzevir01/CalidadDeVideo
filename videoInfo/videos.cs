@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
@@ -18,6 +19,14 @@ namespace videoInfo
         private long peso;
         private TimeSpan duracion;
 
+        //private Image[] thumbnail;
+        //private TimeSpan[] thimbTimeSpan;
+       
+
+
+        
+        
+
         public string Nombre { get => nombre; set => nombre = value; }
         public string Direccion { get => direccion; set => direccion = value; }
         public int FrameRate { get => frameRate; set => frameRate = value; }
@@ -26,6 +35,8 @@ namespace videoInfo
         public int Ancho { get => ancho; set => ancho = value; }
         public long Peso { get => peso; set => peso = value; }
         public TimeSpan Duracion { get => duracion; set => duracion = value; }
+
+
 
         public videos()
         {
@@ -41,6 +52,7 @@ namespace videoInfo
             this.Ancho = ancho;
             this.Peso = peso;
             this.Duracion = duracion;
+           
         }
         //
         public string Ratio()
@@ -143,6 +155,7 @@ namespace videoInfo
 
             return informe;
         }
+        
 
 
 
