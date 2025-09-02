@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Configuration;
 
 namespace videoInfo
 {
@@ -21,6 +20,7 @@ namespace videoInfo
             txtFrameRateV1.KeyPress += txtBitRateV1_KeyPress;
             txtResolucionV1.KeyPress += txtBitRateV1_KeyPress;
             txtBitRateV1.KeyPress += txtBitRateV1_KeyPress;
+
             
         }
 
@@ -31,10 +31,23 @@ namespace videoInfo
             string frameratev1 = ConfigurationManager.AppSettings["framerate-v1"];
             string resolucionv1 = ConfigurationManager.AppSettings["resolucion-v1"];
 
+            string calidad0 = ConfigurationManager.AppSettings["calidad0"];
+            string calidad1 = ConfigurationManager.AppSettings["calidad1"];
+            string calidad2 = ConfigurationManager.AppSettings["calidad2"];
+            string calidad3 = ConfigurationManager.AppSettings["calidad3"];
+            string calidad4 = ConfigurationManager.AppSettings["calidad4"];
+
+
 
             txtBitRateV1.Text = bitratev1;
             txtFrameRateV1.Text = frameratev1;
             txtResolucionV1.Text = resolucionv1;
+
+            txtCalidad0.Text = calidad0;
+            txtCalidad1.Text = calidad1;
+            txtCalidad2.Text = calidad2;
+            txtCalidad3.Text = calidad3;
+            txtCalidad4.Text = calidad4;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -55,114 +68,7 @@ namespace videoInfo
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
         
-        private void txtCopyV1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyV2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyV3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyV4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV1_TextChanged(object sender, EventArgs e)
-        {
-        }
-        
-
-        private void txtCopyFrameV1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyFrameV2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyFrameV3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCopyFrameV4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV4_TextChanged(object sender, EventArgs e)
-        {
-        }
-        
-        private void txtResolucionV1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyResolucionV1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyResolucionV2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyResolucionV3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtCopyResolucionV4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         public void soloNumeros(KeyPressEventArgs e)
         {
             // Verifica si la tecla presionada es un número o una tecla de control (como Backspace)
@@ -219,52 +125,6 @@ namespace videoInfo
             }
         }
 
-        private void txtBitRateV2_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV3_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV4_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtBitRateV1_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV1_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV2_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV3_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtFrameRateV4_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV1_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV2_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV3_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void txtResolucionV4_Leave(object sender, EventArgs e)
-        {
-        }
+       
     }
 }

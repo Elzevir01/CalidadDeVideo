@@ -4,7 +4,7 @@
   <description asmv2:iconFile="pelicula64.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="videoInfo" version="1.0.0.0" publicKeyToken="B77B31712DFDD537" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="videoInfo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="videoInfo.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -55,6 +55,42 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LiveCharts.dll" size="152064">
+      <assemblyIdentity name="LiveCharts" version="0.9.7.0" publicKeyToken="0BC1F845D1EBB8DF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>n8+Jg3tg9pwcUB5M+k0oYIh6/QuPMlgDNn55Wk47yco=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LiveCharts.WinForms.dll" size="19456">
+      <assemblyIdentity name="LiveCharts.WinForms" version="0.9.7.1" publicKeyToken="0BC1F845D1EBB8DF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>pbYcFyYwTmty4JoPNd2/UviadaTijm7QmMjR32CBtK0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LiveCharts.Wpf.dll" size="217600">
+      <assemblyIdentity name="LiveCharts.Wpf" version="0.9.7.0" publicKeyToken="0BC1F845D1EBB8DF" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>G9uxtcGlBlPlwmFh6bfAPtxRhyGm4Q6hgKhASdlnEGs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediaInfoDotNet.dll" size="49152">
       <assemblyIdentity name="MediaInfoDotNet" version="0.7.79.40925" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -67,26 +103,62 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NReco.VideoInfo.dll" size="26920448">
-      <assemblyIdentity name="NReco.VideoInfo" version="1.2.0.0" publicKeyToken="8F59EE36D2987295" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NReco.VideoConverter.dll" size="27085824">
+      <assemblyIdentity name="NReco.VideoConverter" version="1.2.1.0" publicKeyToken="395CCB334978A0CD" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6WugMJJ2vIb/9Ik1+eE02aEOERxOSO3K5G1sfUk/NQo=</dsig:DigestValue>
+        <dsig:DigestValue>ua6qPmQViUc7CMV9gdzTRQSWDQickoMmgorv5JIGrOQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="videoInfo.exe" size="103936">
-      <assemblyIdentity name="videoInfo" version="1.0.0.0" publicKeyToken="B77B31712DFDD537" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NReco.VideoInfo.dll" size="26920960">
+      <assemblyIdentity name="NReco.VideoInfo" version="1.2.1.0" publicKeyToken="8F59EE36D2987295" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xFGPCwShwDoX44Fh5wEM86NpEmfy1g18CAWW98hlYrI=</dsig:DigestValue>
+        <dsig:DigestValue>mqQTuHFoLlRZKHH0VGAs2Kmtj/3FHSy5zSaYG6L2JS8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.dll" size="700928">
+      <assemblyIdentity name="OxyPlot" version="2.2.0.0" publicKeyToken="638079A8F0BD61E9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2nZ+PYwQZ05v+nJnCVLRJ0VEtFO2jndLKfA7UWCkoDQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OxyPlot.WindowsForms.dll" size="32768">
+      <assemblyIdentity name="OxyPlot.WindowsForms" version="2.2.0.0" publicKeyToken="245EACD6B5D2D338" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>B1i4pMEpcw5FhecX1Bg9SLEWenjklVznBNnmzCBBSLI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="videoInfo.exe" size="115712">
+      <assemblyIdentity name="videoInfo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>b+WwWJlL6CJok+HqKGH9fKiQPwSZbBlE9IiVyk1gXN8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -108,13 +180,13 @@
       <dsig:DigestValue>/zWpW30J9y+AP8eE8n1tkOxXlRMrStOXIEHDphOOjGM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="videoInfo.exe.config" size="1188">
+  <file name="videoInfo.exe.config" size="1404">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>r3B+pE+eAwJ72FS7NII9S2KWAogUbU8jFBhAkZHfZ9k=</dsig:DigestValue>
+      <dsig:DigestValue>bQhOAqT5BhTn7/YB2b3I+YonCGE0+fwcEZ3Q9CR4Uwg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="x64\MediaInfo.dll" size="5461840">

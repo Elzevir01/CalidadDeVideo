@@ -26,3 +26,46 @@ C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.exe.manifest
 C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\videoInfo.exe.manifest
 C:\Users\matia\source\repos\videoInfo\videoInfo\bin\Debug\videoInfo.application
 C:\Users\matia\source\repos\videoInfo\videoInfo\obj\Debug\videoInfo.application
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.csproj.AssemblyReference.cache
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.Creditos.resources
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.settingsForm.resources
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.videoInfo.resources
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.Properties.Resources.resources
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.csproj.GenerateResource.cache
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.exe
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.pdb
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\x64\MediaInfo.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\x86\MediaInfo.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\MediaInfoDotNet.dll.config
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\videoInfo.exe.config
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\videoInfo.exe.manifest
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\videoInfo.application
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\videoInfo.exe
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\videoInfo.pdb
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\ExtensionMethods.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\MediaInfoDotNet.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\NReco.VideoInfo.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\ExtensionMethods.pdb
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\ExtensionMethods.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.pdb
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\MediaInfoDotNet.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\NReco.VideoInfo.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.csproj.CoreCompileInputs.cache
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.TrustInfo.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.exe.manifest
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.application
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\obj\Debug\videoInfo.csproj.Up2Date
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\NReco.VideoConverter.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\NReco.VideoConverter.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\OxyPlot.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\OxyPlot.xml
+C:\Users\matia\Documents\Calidad de Video\CalidadDeVideo\videoInfo\bin\Debug\OxyPlot.WindowsForms.xml
