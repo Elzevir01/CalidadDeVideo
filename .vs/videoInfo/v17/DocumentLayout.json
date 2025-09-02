@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoinfo\\videoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|c:\\users\\matia\\documents\\calidad de video\\calidaddevideo\\videoinfo\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|solutionrelative:videoinfo\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|c:\\users\\matia\\documents\\calidad de video\\calidaddevideo\\videoinfo\\videoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|solutionrelative:videoinfo\\videoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|c:\\users\\matia\\documents\\calidad de video\\calidaddevideo\\videoinfo\\videoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoinfo\\videoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|solutionrelative:videoinfo\\videoinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|c:\\users\\matia\\documents\\calidad de video\\calidaddevideo\\videoinfo\\settingsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E5F0499-A5B6-4FA3-9487-3CAACDE6964D}|videoInfo\\videoInfo.csproj|solutionrelative:videoinfo\\settingsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +26,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "videoInfo.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\videoInfo.cs",
               "RelativeDocumentMoniker": "videoInfo\\videoInfo.cs",
               "ToolTip": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\videoInfo.cs",
               "RelativeToolTip": "videoInfo\\videoInfo.cs",
-              "ViewState": "AgIAALcBAAAAAAAAAAAUwMkBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADECAAAAAAAAAAAiwD8CAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-21T16:38:28.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Creditos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\Creditos.cs",
+              "RelativeDocumentMoniker": "videoInfo\\Creditos.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\Creditos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "videoInfo\\Creditos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T13:12:22.423Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "settingsForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\settingsForm.Designer.cs",
+              "RelativeDocumentMoniker": "videoInfo\\settingsForm.Designer.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\settingsForm.Designer.cs",
+              "RelativeToolTip": "videoInfo\\settingsForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T13:11:58.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "videoInfo.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\Calidad de Video\\CalidadDeVideo\\videoInfo\\videoInfo.cs",
               "RelativeDocumentMoniker": "videoInfo\\videoInfo.cs",
